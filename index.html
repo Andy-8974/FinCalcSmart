@@ -529,6 +529,54 @@ function doSearch(){var f=drop.querySelector('.sd-a');if(f){window.location=f.hr
 (function(){
   var posts=[
     {
+      url:"blog/rent-vs-buy-canada.html",cat:"Mortgage",
+      title:"Rent vs Buy in Canada 2026: The 5% Rule and When Buying Actually Wins",
+      excerpt:"The 5% Rule gives a clear monthly breakeven calculation. See how the math plays out in Toronto, Vancouver, Calgary, and smaller markets.",
+      time:"9 min",date:"May 2026",
+      img:"https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=75",
+      alt:"Rent vs Buy in Canada 2026"
+    },
+    {
+      url:"blog/how-much-retirement-savings.html",cat:"Retirement",
+      title:"How Much Should You Have Saved for Retirement? The 2026 Answer by Age",
+      excerpt:"Salary multiples, CPP &amp; Social Security offsets, and what to do if you're behind — the complete 2026 benchmark guide.",
+      time:"8 min",date:"Apr 2026",
+      img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=75",
+      alt:"How Much Should You Have Saved for Retirement"
+    },
+    {
+      url:"blog/4-percent-rule.html",cat:"FIRE &amp; Retirement",
+      title:"The 4% Rule Explained: Is It Still Safe for Early Retirees in 2026?",
+      excerpt:"The original Trinity Study, sequence of returns risk, adjusted rates for 40–50 year retirements, and how CPP &amp; OAS reduce your FIRE number.",
+      time:"9 min",date:"Apr 2026",
+      img:"https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&q=75",
+      alt:"The 4% Rule Explained 2026"
+    },
+    {
+      url:"blog/traditional-vs-roth-ira.html",cat:"Retirement",
+      title:"Traditional IRA vs Roth IRA: Which Is Right for You in 2026?",
+      excerpt:"Tax now or tax later? 2026 contribution limits, income phase-outs, the Backdoor Roth, and a clear decision framework for every income level.",
+      time:"8 min",date:"Apr 2026",
+      img:"https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600&q=75",
+      alt:"Traditional IRA vs Roth IRA 2026"
+    },
+    {
+      url:"blog/tfsa-vs-rrsp.html",cat:"Savings",
+      title:"TFSA vs RRSP: Which Should You Contribute to First in 2026?",
+      excerpt:"The income thresholds, withdrawal rules, and the exact strategy that lets you fund both accounts from one source of capital.",
+      time:"8 min",date:"Mar 2026",
+      img:"https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=75",
+      alt:"TFSA vs RRSP 2026 Canada"
+    },
+    {
+      url:"blog/debt-payoff-strategies.html",cat:"Debt",
+      title:"Debt Avalanche vs Snowball: Which Pays Off Debt Faster and Saves More?",
+      excerpt:"Side-by-side example with real numbers, the interest savings gap, and how to pick the method you'll actually stick with.",
+      time:"7 min",date:"Mar 2026",
+      img:"https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=75",
+      alt:"Debt Avalanche vs Snowball Method"
+    },
+    {
       url:"blog/mortgage-calculator-guide.html",cat:"Mortgage",
       title:"How to Use a Mortgage Calculator: A Complete Guide",
       excerpt:"Learn how to use a mortgage calculator to understand amortization, P&I payments, total interest, and how small rate changes cost thousands. ",
@@ -603,7 +651,7 @@ function doSearch(){var f=drop.querySelector('.sd-a');if(f){window.location=f.hr
   ];
   var grid=document.getElementById('hp-blog-grid');
   if(!grid)return;
-  posts.forEach(function(p){
+  posts.slice(0,6).forEach(function(p){
     var card=document.createElement('a');
     card.className='blog-card';
     card.href=p.url;

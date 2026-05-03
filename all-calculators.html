@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>All 40 Free Financial Calculators — Canada & USA | FinCalc Smart</title>
+<meta name="description" content="Browse all 40 free FinCalc Smart financial calculators. Mortgage, TFSA, RRSP, FIRE, investing, tax, loans, retirement — for Canada and USA. No sign-up required."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style id="cw-body-font">body,body *{font-family:'Plus Jakarta Sans',sans-serif!important}</style>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1B2A;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── PAGE HERO ───────────────────────────────────────────── */
+.hub-hero{background:#0D1B2A;padding:52px 80px 56px;position:relative;overflow:hidden}
+.hub-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(29,181,132,0.07) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.hub-hero-inner{position:relative;max-width:1400px;margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.hub-hero-left{}
+.hub-hero-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1DB584;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.hub-hero-label::before{content:'';display:inline-block;width:20px;height:1.5px;background:#1DB584}
+.hub-hero h1{font-size:40px;font-weight:800;color:#fff;letter-spacing:-.8px;line-height:1.15;margin-bottom:10px}
+.hub-hero p{font-size:15px;color:rgba(255,255,255,.5);max-width:520px}
+.hub-hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hub-stat{text-align:center}
+.hub-stat-n{font-size:28px;font-weight:900;color:#1DB584;letter-spacing:-1px;line-height:1}
+.hub-stat-l{font-size:11px;color:rgba(255,255,255,.35);margin-top:3px;font-weight:500}
+
+/* ── FILTER BAR ──────────────────────────────────────────── */
+.filter-bar{background:#fff;border-bottom:1.5px solid #E4E9EF;padding:0 80px;position:sticky;top:62px;z-index:200}
+.filter-bar-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:14px 0;overflow-x:auto;scrollbar-width:none}
+.filter-bar-inner::-webkit-scrollbar{display:none}
+.filter-label{font-size:12px;font-weight:600;color:#9BA8B5;white-space:nowrap;margin-right:4px}
+.fbtn{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:20px;border:1.5px solid #E4E9EF;background:#fff;color:#6B7A8D;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.fbtn:hover{border-color:#1DB584;color:#1DB584}
+.fbtn.active{background:#0D1B2A;color:#fff;border-color:#0D1B2A}
+.fbtn .fbtn-count{font-size:10px;font-weight:700;background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px;margin-left:2px}
+.fbtn:not(.active) .fbtn-count{background:rgba(0,0,0,.06);color:inherit}
+
+/* ── MAIN CONTENT ────────────────────────────────────────── */
+.hub-body{max-width:1400px;margin:0 auto;padding:40px 80px 80px}
+.cat-section{margin-bottom:56px}
+.cat-header{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.cat-title{font-size:20px;font-weight:800;color:#0D1B2A;letter-spacing:-.3px}
+.cat-count{font-size:12px;font-weight:600;color:#9BA8B5;background:#F1F4F7;padding:3px 10px;border-radius:10px}
+.cat-divider{flex:1;height:1px;background:#E4E9EF}
+
+/* ── TOOL GRID — 4 columns ──────────────────────────────── */
+.hub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+
+/* ── TOOL CARD — matches homepage style exactly ─────────── */
+.tool-card{background:#fff;border:1.5px solid #E4E9EF;border-radius:16px;padding:22px;display:flex;flex-direction:column;position:relative;overflow:hidden;text-decoration:none;color:inherit;transition:all .2s}
+.tool-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(29,181,132,0.04) 0%,transparent 60%);opacity:0;transition:opacity .2s}
+.tool-card:hover{border-color:rgba(29,181,132,0.4);transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.09)}
+.tool-card:hover::before{opacity:1}
+.tool-card-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
+.ibadge-sm{width:38px;height:38px;border-radius:10px;background:#0D1B2A;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ibadge-sm svg{width:17px;height:17px}
+.tool-name{font-size:15px;font-weight:700;color:#0D1B2A;margin-bottom:6px;line-height:1.3}
+.tool-desc{font-size:12px;color:#6B7A8D;line-height:1.55;flex:1}
+.tool-footer{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid #F1F4F7}
+.tool-tag{font-size:10px;padding:3px 8px;border-radius:5px;font-weight:700}
+.tc-ca{background:#E6F7F1;color:#0A6644;border:1px solid #B2DFD0}
+.tc-us{background:#EEF4FD;color:#1A4E8A;border:1px solid #BDD0F0}
+.tc-both{background:#F3F4F6;color:#4B5563;border:1px solid #D1D5DB}
+.calc-btn{display:inline-flex;align-items:center;gap:5px;background:#1DB584;color:#fff;border:none;border-radius:8px;padding:7px 13px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;white-space:nowrap;text-decoration:none}
+.calc-btn:hover{background:#18a073}
+.calc-btn svg{width:11px;height:11px}
+
+/* ── EMPTY STATE ─────────────────────────────────────────── */
+.empty-state{text-align:center;padding:80px 20px;color:#9BA8B5}
+.empty-state svg{width:48px;height:48px;margin-bottom:16px;opacity:.4}
+.empty-state p{font-size:15px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1200px){.hub-body{padding:36px 48px 60px}.hub-hero{padding:44px 48px 48px}.filter-bar{padding:0 48px}}
+@media(max-width:1024px){.hub-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.hub-hero{padding:36px 20px 40px}.hub-hero h1{font-size:28px}.filter-bar{padding:0 16px}.hub-body{padding:28px 16px 48px}.hub-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.hub-grid{grid-template-columns:1fr}}
+</style>
+
+<meta property="og:site_name" content="FinCalc Smart"/>
+<meta property="og:url" content="https://fincalcsmart.com/all-calculators.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="FinCalc Smart"/>
+  <meta property="og:title" content="All 40 Free Financial Calculators — Canada & USA | FinCalc Smart"/>
+  <meta property="og:description" content="40 free financial calculators covering mortgage, investing, retirement, tax, and loans for USA and Canada."/>
+  <meta property="og:url" content="https://fincalcsmart.com/all-calculators.html"/>
+  <meta property="og:image" content="https://fincalcsmart.com/favicon.svg"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="All 40 Free Financial Calculators — Canada & USA | FinCalc Smart"/>
+  <meta name="twitter:description" content="40 free financial calculators covering mortgage, investing, retirement, tax, and loans for USA and Canada."/>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<!-- HERO -->
+<div class="hub-hero">
+  <div class="hub-hero-inner">
+    <div class="hub-hero-left">
+      <div class="hub-hero-label">Free & No Sign-Up Required</div>
+      <h1>All Financial Calculators</h1>
+      <p>40 free tools for every financial decision — mortgage, investing, retirement, tax, and more. Canada & USA.</p>
+    </div>
+    <div class="hub-hero-stats">
+      <div class="hub-stat"><div class="hub-stat-n">40</div><div class="hub-stat-l">Calculators</div></div>
+      <div class="hub-stat"><div class="hub-stat-n">6</div><div class="hub-stat-l">Categories</div></div>
+      <div class="hub-stat"><div class="hub-stat-n">2</div><div class="hub-stat-l">Countries</div></div>
+      <div class="hub-stat"><div class="hub-stat-n">$0</div><div class="hub-stat-l">Cost</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <span class="filter-label">Filter:</span>
+    <button class="fbtn active" data-cat="all" onclick="filterCat('all',this)">All <span class="fbtn-count">40</span></button>
+    <button class="fbtn" data-cat="Mortgage" onclick="filterCat('Mortgage',this)">Mortgage <span class="fbtn-count">5</span></button>
+    <button class="fbtn" data-cat="Financial Planning" onclick="filterCat('Financial Planning',this)">Financial Planning <span class="fbtn-count">6</span></button>
+    <button class="fbtn" data-cat="Investing" onclick="filterCat('Investing',this)">Investing <span class="fbtn-count">7</span></button>
+    <button class="fbtn" data-cat="Retirement" onclick="filterCat('Retirement',this)">Retirement <span class="fbtn-count">8</span></button>
+    <button class="fbtn" data-cat="Loans" onclick="filterCat('Loans',this)">Loans <span class="fbtn-count">7</span></button>
+    <button class="fbtn" data-cat="Tax & Salary" onclick="filterCat('Tax & Salary',this)">Tax & Salary <span class="fbtn-count">7</span></button>
+  </div>
+</div>
+
+<!-- CALCULATOR GRID -->
+<div class="hub-body" id="hub-body"></div>
+
+<script>
+/* ── All 40 calculators ──────────────────────────────────── */
+var CALCS=[
+  /* MORTGAGE — 5 */
+  {n:'Mortgage Calculator',f:'calculators/mortgage-calculator.html',cat:'Mortgage',region:'both',
+   desc:'Monthly payments, total interest & full amortization schedule for fixed or variable rates.',
+   icon:'<path d="M2 8L8.5 2.5L15 8V15H11V10.5H6V15H2V8Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/>'},
+  {n:'Mortgage Qualifier',f:'calculators/mortgage-qualifier.html',cat:'Mortgage',region:'both',
+   desc:'Find the maximum mortgage you qualify for based on income, debts, and stress test rules.',
+   icon:'<polyline points="3 9 8.5 3 14 9"/><path d="M5 9v6h9V9" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><path d="M7.5 9l2 2 2-4" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>'},
+  {n:'CMHC Insurance Calculator',f:'calculators/cmhc-mortgage-insurance.html',cat:'Mortgage',region:'ca',
+   desc:'Calculate your mortgage default insurance premium for down payments under 20%.',
+   icon:'<path d="M8.5 2L14 5.5V10C14 12.8 11.6 15.2 8.5 16C5.4 15.2 3 12.8 3 10V5.5L8.5 2Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><path d="M6 8.5L7.8 10.3L11 7" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>'},
+  {n:'Rent vs. Buy Calculator',f:'calculators/rent-vs-buy.html',cat:'Mortgage',region:'both',
+   desc:'Compare total wealth after 10 years — buying vs renting — including equity and opportunity cost.',
+   icon:'<path d="M2 8L8.5 2.5L15 8V15H11V10.5H6V15H2V8Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="11" y1="3.5" x2="13.5" y2="3.5" stroke="#C9A84C" stroke-width="1.2"/><line x1="13.5" y1="3.5" x2="13.5" y2="6" stroke="#C9A84C" stroke-width="1.2"/>'},
+  {n:'Mortgage Refinance Calculator',f:'calculators/mortgage-refinance.html',cat:'Mortgage',region:'both',
+   desc:'Calculate monthly savings, break-even point, and total interest saved by refinancing.',
+   icon:'<path d="M3 5C4 3 6 2 8.5 2C11.5 2 14 4.5 14 7M14 9.5C13 11.5 11 12.5 8.5 12.5C5.5 12.5 3 10 3 7" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><polyline points="11.5 7 14 9.5 16.5 7" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>'},
+
+  /* FINANCIAL PLANNING — 6 */
+  {n:'Net Worth Calculator',f:'calculators/net-worth.html',cat:'Financial Planning',region:'both',
+   desc:'Assets minus liabilities — the fundamental measure of your complete financial health.',
+   icon:'<path d="M2.5 12L6.5 7.5L9.5 10.5L13 5.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 5.5H13.5V7.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.5 15H14.5" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>'},
+  {n:'Emergency Fund Calculator',f:'calculators/emergency-fund.html',cat:'Financial Planning',region:'both',
+   desc:'Determine exactly how much you need saved and how long it will take to get there.',
+   icon:'<path d="M8.5 1.5L10.5 5.5H15L11.5 8L13 12.5L8.5 10L4 12.5L5.5 8L2 5.5H6.5L8.5 1.5Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/>'},
+  {n:'TFSA Calculator',f:'calculators/tfsa.html',cat:'Financial Planning',region:'ca',
+   desc:'Project tax-free growth and track your cumulative contribution room. 2026 limit: $7,000.',
+   icon:'<rect x="2.5" y="6" width="12" height="9.5" rx="2" stroke="#C9A84C" stroke-width="1.4"/><path d="M5.5 6V4.5C5.5 3.4 6.4 2.5 8.5 2.5C10.6 2.5 11.5 3.4 11.5 4.5V6" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+  {n:'RRSP Savings Calculator',f:'calculators/rrsp-savings.html',cat:'Financial Planning',region:'ca',
+   desc:'Project RRSP growth, estimate your tax refund, and optimize annual contributions.',
+   icon:'<rect x="2.5" y="3" width="12" height="11" rx="2" stroke="#C9A84C" stroke-width="1.4"/><line x1="5" y1="7" x2="12" y2="7" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="9.5" x2="12" y2="9.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="5" y1="12" x2="9" y2="12" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'RRSP Loan Calculator',f:'calculators/rrsp-loan.html',cat:'Financial Planning',region:'ca',
+   desc:'Analyze whether borrowing to contribute to your RRSP makes financial sense.',
+   icon:'<rect x="2" y="5" width="13" height="8" rx="1.5" stroke="#C9A84C" stroke-width="1.4"/><circle cx="8.5" cy="9" r="1.5" stroke="#C9A84C" stroke-width="1.2"/>'},
+  {n:'Vacation Savings Calculator',f:'calculators/vacation-savings.html',cat:'Financial Planning',region:'both',
+   desc:'Set a travel goal, pick your timeline, and see exactly how much to save per week.',
+   icon:'<path d="M8.5 2L15 6V14L8.5 16L2 14V6L8.5 2Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/>'},
+
+  /* INVESTING — 7 */
+  {n:'Compound Interest Calculator',f:'calculators/compound-interest.html',cat:'Investing',region:'both',
+   desc:'See how your investments grow exponentially over time with regular contributions.',
+   icon:'<line x1="8.5" y1="1.5" x2="8.5" y2="15.5" stroke="#C9A84C" stroke-width="1.4"/><path d="M11.5 4H6A2.5 2.5 0 0 0 6 9H9A2.5 2.5 0 0 1 9 14H4" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'ROI Calculator',f:'calculators/roi.html',cat:'Investing',region:'both',
+   desc:'Calculate return on investment, CAGR, and annualized gain or loss on any investment.',
+   icon:'<path d="M2 11L6.5 6.5L9.5 9.5L14 3.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 3.5H14.5V6.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>'},
+  {n:'Automatic Investment Plan',f:'calculators/auto-investment-plan.html',cat:'Investing',region:'both',
+   desc:'Model dollar-cost averaging with regular contributions and market return projections.',
+   icon:'<path d="M2 11L6.5 6.5L9.5 9.5L14 3.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 3.5H14.5V6.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="2" y1="14" x2="15" y2="14" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>'},
+  {n:'Investment Fees Calculator',f:'calculators/investment-fees.html',cat:'Investing',region:'both',
+   desc:'See the true long-term cost of MER fees and why low-cost ETFs outperform over decades.',
+   icon:'<line x1="8.5" y1="1.5" x2="8.5" y2="15" stroke="#C9A84C" stroke-width="1.4"/><path d="M11 4H6A2 2 0 1 0 6 8H10A2 2 0 1 1 10 12H4.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Rule of 72 Calculator',f:'calculators/rule-of-72.html',cat:'Investing',region:'both',
+   desc:'Instantly estimate how many years it takes to double your money at any return rate.',
+   icon:'<circle cx="8.5" cy="8.5" r="6.5" stroke="#C9A84C" stroke-width="1.4"/><line x1="8.5" y1="5.5" x2="8.5" y2="8.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="8.5" y1="10.5" x2="8.51" y2="10.5" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/>'},
+  {n:'Asset Allocation Calculator',f:'calculators/asset-allocation.html',cat:'Investing',region:'both',
+   desc:'Get a personalized stock/bond split based on your age, timeline, and risk tolerance.',
+   icon:'<path d="M15 8.5A6.5 6.5 0 1 1 8.5 2V8.5Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><path d="M8.5 2A6.5 6.5 0 0 1 15 8.5H8.5Z" fill="rgba(201,168,76,0.2)" stroke="#C9A84C" stroke-width="1.4"/>'},
+  {n:'Black-Scholes Calculator',f:'calculators/black-scholes.html',cat:'Investing',region:'both',
+   desc:'Price European call and put options with full Greeks — delta, gamma, theta, vega.',
+   icon:'<circle cx="8.5" cy="8.5" r="6.5" stroke="#C9A84C" stroke-width="1.4"/><circle cx="8.5" cy="8.5" r="3" stroke="#C9A84C" stroke-width="1.2"/><line x1="3.3" y1="3.3" x2="13.7" y2="13.7" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>'},
+
+  /* RETIREMENT — 8 */
+  {n:'F.I.R.E. Calculator',f:'calculators/fire.html',cat:'Retirement',region:'both',
+   desc:'Monte Carlo simulation with inflation-adjusted projections, Coast FIRE & Barista FIRE modes.',
+   icon:'<path d="M8.5 15C5.7 15 3.5 12.8 3.5 10C3.5 7.2 5.8 5 7 3C7.4 5.2 8.5 5.5 8.5 4C10 5.5 13.5 7.5 13.5 10C13.5 12.8 11.3 15 8.5 15Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/>'},
+  {n:'Retirement Planning Calculator',f:'calculators/retirement-planning.html',cat:'Retirement',region:'both',
+   desc:'Track if you\'re on pace for retirement and see exactly how much more you need to save.',
+   icon:'<rect x="2" y="3" width="13" height="12" rx="2" stroke="#C9A84C" stroke-width="1.4"/><line x1="5" y1="2" x2="5" y2="5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="12" y1="2" x2="12" y2="5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="2" y1="8" x2="15" y2="8" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Retirement Withdrawal Calculator',f:'calculators/retirement-withdrawal.html',cat:'Retirement',region:'both',
+   desc:'Calculate how long your retirement savings last using the 4% rule and custom withdrawal rates.',
+   icon:'<path d="M2 6H15L11 10.5H6L2 6Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="8.5" y1="10.5" x2="8.5" y2="15.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="5.5" y1="15.5" x2="11.5" y2="15.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Roth IRA Calculator',f:'calculators/roth-ira.html',cat:'Retirement',region:'us',
+   desc:'Project tax-free retirement wealth and compare Roth vs Traditional IRA growth.',
+   icon:'<circle cx="8.5" cy="8.5" r="6.5" stroke="#C9A84C" stroke-width="1.4"/><path d="M8.5 5.5V8.5L11 10" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+  {n:'401(k) Contribution Calculator',f:'calculators/401k-contribution.html',cat:'Retirement',region:'us',
+   desc:'Model employer match, annual contributions, and projected balance at retirement.',
+   icon:'<path d="M2 8L8.5 2.5L15 8V15H11V10.5H6V15H2V8Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="6" y1="12" x2="11" y2="12" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>'},
+  {n:'401(k) Save the Max',f:'calculators/401k-save-max.html',cat:'Retirement',region:'us',
+   desc:'Calculate the exact per-paycheck amount needed to hit the annual 401(k) limit by year-end.',
+   icon:'<path d="M2 8L8.5 2.5L15 8V15H2V8Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="8.5" y1="9" x2="8.5" y2="13" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="6.5" y1="11" x2="10.5" y2="11" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+  {n:'Traditional vs Roth IRA',f:'calculators/ira-comparison.html',cat:'Retirement',region:'us',
+   desc:'Side-by-side comparison of after-tax wealth under Traditional and Roth IRA strategies.',
+   icon:'<line x1="11" y1="2" x2="14" y2="5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="14" y1="5" x2="11" y2="8" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="2" y1="5" x2="14" y2="5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="6" y1="9" x2="3" y2="12" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="3" y1="12" x2="6" y2="15" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="15" y1="12" x2="3" y2="12" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Annuity Calculator',f:'calculators/annuity.html',cat:'Retirement',region:'both',
+   desc:'Calculate present value, future value, and payment amounts for ordinary annuities.',
+   icon:'<line x1="2" y1="4" x2="15" y2="4" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="2" y1="8" x2="15" y2="8" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="2" y1="12" x2="10" y2="12" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="13" y1="11" x2="13" y2="15" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="11" y1="13" x2="15" y2="13" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+
+  /* LOANS — 7 */
+  {n:'Personal Loan Calculator',f:'calculators/personal-loan.html',cat:'Loans',region:'both',
+   desc:'Monthly payment, total interest, and full amortization schedule for personal loans.',
+   icon:'<path d="M13.5 6H14.5C15.3 6 16 6.7 16 7.5S15.3 9 14.5 9H13.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><path d="M2 6H13.5V11.5C13.5 12.3 12.8 13 12 13H3.5C2.7 13 2 12.3 2 11.5V6Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="5" y1="3" x2="5" y2="6" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="8.5" y1="3" x2="8.5" y2="6" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Car Loan Calculator',f:'calculators/car-loan.html',cat:'Loans',region:'both',
+   desc:'Calculate monthly payments, total cost, and compare loan terms for vehicle financing.',
+   icon:'<rect x="2" y="8.5" width="13" height="5" rx="1.5" stroke="#C9A84C" stroke-width="1.4"/><path d="M3 8.5L5.5 4.5H11.5L14 8.5" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><circle cx="5.5" cy="13.5" r="1.2" fill="#C9A84C"/><circle cx="11.5" cy="13.5" r="1.2" fill="#C9A84C"/>'},
+  {n:'Student Loan Calculator',f:'calculators/student-loan.html',cat:'Loans',region:'both',
+   desc:'Monthly payments, payoff timeline, and interest saved with extra payments. Canada OSAP & US Federal.',
+   icon:'<path d="M8.5 2L2 5.5L8.5 9L15 5.5L8.5 2Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><path d="M4.5 7.5V11.5C6 13.5 11 13.5 12.5 11.5V7.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Simple Interest Calculator',f:'calculators/simple-interest.html',cat:'Loans',region:'both',
+   desc:'Calculate interest, total amount, and time for any principal using simple interest formula.',
+   icon:'<line x1="8.5" y1="2" x2="8.5" y2="15" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="2" y1="8.5" x2="15" y2="8.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+  {n:'Debt Repayment Calculator',f:'calculators/debt-repayment.html',cat:'Loans',region:'both',
+   desc:'Compare avalanche vs snowball strategies across multiple debts and see total interest saved.',
+   icon:'<line x1="8.5" y1="2" x2="8.5" y2="15" stroke="#C9A84C" stroke-width="1.4"/><path d="M5 5L8.5 2L12 5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12L8.5 15L5 12" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>'},
+  {n:'Credit Card Payoff Calculator',f:'calculators/credit-card-payoff.html',cat:'Loans',region:'both',
+   desc:'See exactly when you\'ll be debt-free and how extra payments save thousands in interest.',
+   icon:'<rect x="2" y="4" width="13" height="10" rx="2" stroke="#C9A84C" stroke-width="1.4"/><line x1="2" y1="8" x2="15" y2="8" stroke="#C9A84C" stroke-width="1.3"/><line x1="5" y1="11.5" x2="8" y2="11.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Car Lease Calculator',f:'calculators/car-lease.html',cat:'Loans',region:'both',
+   desc:'Calculate monthly lease payments and compare total lease cost vs buying outright.',
+   icon:'<rect x="2" y="8" width="13" height="5" rx="1.5" stroke="#C9A84C" stroke-width="1.4"/><path d="M3 8L5 5H12L14 8" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><line x1="2" y1="10.5" x2="15" y2="10.5" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>'},
+
+  /* TAX & SALARY — 7 */
+  {n:'Income Tax Calculator',f:'calculators/income-tax.html',cat:'Tax & Salary',region:'both',
+   desc:'Federal + provincial/state marginal rates for 2026, updated for Canada and USA.',
+   icon:'<rect x="3.5" y="2" width="10" height="13" rx="2" stroke="#C9A84C" stroke-width="1.4"/><line x1="6" y1="6.5" x2="11" y2="6.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="6" y1="9" x2="11" y2="9" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="6" y1="11.5" x2="9" y2="11.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Salary Calculator',f:'calculators/salary.html',cat:'Tax & Salary',region:'both',
+   desc:'Convert hourly, daily, weekly, monthly or annual pay. Includes overtime and benefits value.',
+   icon:'<rect x="2" y="5" width="13" height="9" rx="2" stroke="#C9A84C" stroke-width="1.4"/><path d="M5.5 5V3.5A1 1 0 0 1 6.5 2.5H10.5A1 1 0 0 1 11.5 3.5V5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><line x1="8.5" y1="8" x2="8.5" y2="11" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/><line x1="7" y1="9.5" x2="10" y2="9.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+  {n:'Hourly to Salary Calculator',f:'calculators/hourly-to-salary.html',cat:'Tax & Salary',region:'both',
+   desc:'Convert any hourly wage to annual salary and see your take-home pay after taxes.',
+   icon:'<circle cx="8.5" cy="8.5" r="6.5" stroke="#C9A84C" stroke-width="1.4"/><path d="M8.5 5V8.5L11 10.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>'},
+  {n:'Capital Gains Tax Calculator',f:'calculators/capital-gains-tax.html',cat:'Tax & Salary',region:'both',
+   desc:'Calculate tax owing on investment or property sales. Canada 2/3 inclusion rate updated.',
+   icon:'<path d="M2 12L6.5 7.5L9.5 10.5L14 4.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 4.5H14.5V7.5" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>'},
+  {n:'Sales Tax Calculator',f:'calculators/sales-tax.html',cat:'Tax & Salary',region:'both',
+   desc:'GST/HST/PST for all Canadian provinces and sales tax for all 50 US states.',
+   icon:'<path d="M2.5 2.5H9L14 7.5V15H2.5V2.5Z" stroke="#C9A84C" stroke-width="1.4" stroke-linejoin="round"/><circle cx="6" cy="6" r="1" fill="#C9A84C"/><circle cx="11" cy="11.5" r="1" fill="#C9A84C"/><line x1="4.5" y1="13" x2="12" y2="4" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>'},
+  {n:'Currency Exchange Calculator',f:'calculators/currency-exchange.html',cat:'Tax & Salary',region:'both',
+   desc:'Convert between USD, CAD, and major world currencies with live exchange rate context.',
+   icon:'<path d="M12 2L15 5L12 8" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="2" y1="5" x2="15" y2="5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/><path d="M5 9L2 12L5 15" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="15" y1="12" x2="2" y2="12" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>'},
+  {n:'Inflation Calculator',f:'calculators/inflation.html',cat:'Tax & Salary',region:'both',
+   desc:'See what today\'s dollars are worth in the future and compare purchasing power over time.',
+   icon:'<line x1="13" y1="3" x2="13" y2="14" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/><line x1="8.5" y1="6" x2="8.5" y2="14" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="9.5" x2="4" y2="14" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>'},
+];
+
+var CAT_ORDER=['Mortgage','Financial Planning','Investing','Retirement','Loans','Tax & Salary'];
+
+/* ── Render ────────────────────────────────────────────── */
+function regionTag(r){
+  if(r==='ca')return '<span class="tool-tag tc-ca">Canada only</span>';
+  if(r==='us')return '<span class="tool-tag tc-us">USA only</span>';
+  return '<span class="tool-tag tc-both">CA + US</span>';
+}
+var arrow='<svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function buildCard(c){
+  return '<a href="'+c.f+'" class="tool-card">'
+    +'<div class="tool-card-hd">'
+    +'<div class="ibadge-sm"><svg viewBox="0 0 17 17" fill="none">'+c.icon+'</svg></div>'
+    +'</div>'
+    +'<div class="tool-name">'+c.n+'</div>'
+    +'<div class="tool-desc">'+c.desc+'</div>'
+    +'<div class="tool-footer" style="justify-content:flex-end">'
+    +'<span class="calc-btn">Open Calculator '+arrow+'</span>'
+    +'</div></a>';
+}
+
+function render(activeCat){
+  var body=document.getElementById('hub-body');
+  body.innerHTML='';
+  var cats=activeCat==='all'?CAT_ORDER:[activeCat];
+  var total=0;
+  cats.forEach(function(cat){
+    var items=CALCS.filter(function(c){return c.cat===cat;});
+    if(!items.length)return;
+    total+=items.length;
+    var sec=document.createElement('div');
+    sec.className='cat-section';
+    sec.id='cat-'+cat.replace(/\s+/g,'-').toLowerCase();
+    sec.innerHTML='<div class="cat-header">'
+      +'<div class="cat-title">'+cat+'</div>'
+      +'<div class="cat-count">'+items.length+' calculators</div>'
+      +'<div class="cat-divider"></div>'
+      +'</div>'
+      +'<div class="hub-grid">'+items.map(buildCard).join('')+'</div>';
+    body.appendChild(sec);
+  });
+}
+
+function filterCat(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  render(cat);
+  // No scroll — cards update in place, banner stays visible
+}
+
+/* ── URL hash filter on load ────────────────────────────── */
+function initFilter(){
+  var hash=window.location.hash.replace('#','');
+  var catMap={
+    'mortgage':'Mortgage',
+    'financial-planning':'Financial Planning',
+    'investing':'Investing',
+    'retirement':'Retirement',
+    'loans':'Loans',
+    'tax-salary':'Tax & Salary',
+    // Stage shorthand
+    'starting':'Financial Planning',
+    'building':'Investing',
+    'planning-retirement':'Retirement'
+  };
+  var activeCat='all';
+  if(hash&&catMap[hash]){
+    activeCat=catMap[hash];
+    // Activate correct filter button
+    document.querySelectorAll('.fbtn').forEach(function(b){
+      b.classList.remove('active');
+      if(b.dataset.cat===activeCat)b.classList.add('active');
+    });
+  }
+  render(activeCat);
+}
+window.addEventListener('DOMContentLoaded',initFilter);
+</script>
+<script src="shared.js"></script>
+</body></html>

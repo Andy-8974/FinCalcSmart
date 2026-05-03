@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Long Will My Retirement Savings Last? Calculator 2026 | FinCalc Smart</title>
+<meta name="description" content="See how long your retirement savings will last. Model safe withdrawal rates, investment returns, and inflation to find your sustainable spending amount. USA & Canada 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Retirement Withdrawal Calculator — USA & Canada | FinCalc Smart",
+  "description": "",
+  "url": "https://fincalcsmart.com/calculators/retirement-withdrawal.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "FinCalc Smart"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the RRIF minimum withdrawal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Convert RRSP to RRIF by age 71. RRIF minimums by age: 71 = 5.28%, 75 = 5.82%, 80 = 6.82%, 85 = 8.51%, 90 = 11.92%, 95+ = 20%. These are minimums — you can withdraw more. Strategic planning: draw down "
+      }
+    },    {
+      "@type": "Question",
+      "name": "What are RMDs in the USA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SECURE 2.0 Act raised the Required Minimum Distribution age to 73 (born 1951–1959) or 75 (born 1960+). Failure to take RMDs triggers a 25% excise tax. RMD amount = account balance ÷ IRS life expectanc"
+      }
+    },    {
+      "@type": "Question",
+      "name": "What is sequence-of-returns risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Getting poor returns early in retirement can be catastrophic. If markets drop 40% in year 1 and you're withdrawing 4%, your portfolio shrinks so much it may never recover. Mitigation: keep 1–2 years o"
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style id="cw-body-font">body,body *{font-family:'Plus Jakarta Sans',sans-serif!important}</style>
+
+<meta property="og:site_name" content="FinCalc Smart"/>
+<meta property="og:url" content="https://fincalcsmart.com/calculators/retirement-withdrawal.html"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="FinCalc Smart"/>
+  <meta property="og:title" content="Retirement Withdrawal Calculator 2026 — USA & Canada | FinCalc Smart"/>
+  <meta property="og:description" content="Free professional financial calculator for USA and Canada."/>
+  <meta property="og:url" content="https://fincalcsmart.com/calculators/retirement-withdrawal.html"/>
+  <meta property="og:image" content="https://fincalcsmart.com/favicon.svg"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Retirement Withdrawal Calculator 2026 — USA & Canada | FinCalc Smart"/>
+  <meta name="twitter:description" content="Free professional financial calculator for USA and Canada."/>
+  <link rel="canonical" href="https://fincalcsmart.com/calculators/retirement-withdrawal.html"/>
+</head>
+<body>
+<script src="../nav.js"></script>
+<div class="calc-hero"><div class="calc-hero-inner">
+  <h1>Retirement Withdrawal Calculator</h1>
+  <p>Safe withdrawal rate — how long will your retirement savings last with inflation?</p>
+  <div class="country-toggle">
+      <div class="cw-toggle"><button class="cw-tbtn on" data-mode="us"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;flex-shrink:0"><rect width="20" height="14" fill="#B22234"/><rect y="1.08" width="20" height="1.08" fill="#fff"/><rect y="3.23" width="20" height="1.08" fill="#fff"/><rect y="5.38" width="20" height="1.08" fill="#fff"/><rect y="7.54" width="20" height="1.08" fill="#fff"/><rect y="9.69" width="20" height="1.08" fill="#fff"/><rect y="11.85" width="20" height="1.08" fill="#fff"/><rect width="8" height="7.54" fill="#3C3B6E"/><circle cx="1.3" cy="1.1" r=".55" fill="#fff"/><circle cx="2.65" cy="1.1" r=".55" fill="#fff"/><circle cx="4" cy="1.1" r=".55" fill="#fff"/><circle cx="5.35" cy="1.1" r=".55" fill="#fff"/><circle cx="6.7" cy="1.1" r=".55" fill="#fff"/><circle cx="1.97" cy="2.32" r=".55" fill="#fff"/><circle cx="3.32" cy="2.32" r=".55" fill="#fff"/><circle cx="4.67" cy="2.32" r=".55" fill="#fff"/><circle cx="6.02" cy="2.32" r=".55" fill="#fff"/><circle cx="1.3" cy="3.54" r=".55" fill="#fff"/><circle cx="2.65" cy="3.54" r=".55" fill="#fff"/><circle cx="4" cy="3.54" r=".55" fill="#fff"/><circle cx="5.35" cy="3.54" r=".55" fill="#fff"/><circle cx="6.7" cy="3.54" r=".55" fill="#fff"/><circle cx="1.97" cy="4.77" r=".55" fill="#fff"/><circle cx="3.32" cy="4.77" r=".55" fill="#fff"/><circle cx="4.67" cy="4.77" r=".55" fill="#fff"/><circle cx="6.02" cy="4.77" r=".55" fill="#fff"/><circle cx="1.3" cy="6" r=".55" fill="#fff"/><circle cx="2.65" cy="6" r=".55" fill="#fff"/><circle cx="4" cy="6" r=".55" fill="#fff"/><circle cx="5.35" cy="6" r=".55" fill="#fff"/><circle cx="6.7" cy="6" r=".55" fill="#fff"/></svg>&nbsp;USA</button><button class="cw-tbtn" data-mode="ca"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;flex-shrink:0"><rect width="20" height="14" fill="#fff"/><rect width="5" height="14" fill="#D52B1E"/><rect x="15" width="5" height="14" fill="#D52B1E"/><path d="M10 2L10.5 4.2 12.5 3.5 11.5 5.2 13.5 5.5 12 6.8 13 8.5 10.8 7.8 10.8 11H9.2L9.2 7.8 7 8.5 8 6.8 6.5 5.5 8.5 5.2 7.5 3.5 9.5 4.2Z11.4 7.1L12.3 9.8L10 8.2L7.7 9.8L8.6 7.1L6.4 5.5H9.1Z" fill="#D52B1E"/></svg>&nbsp;Canada</button></div>
+    </div>
+</div></div>
+<div id="print-header" style="display:none" style="display:flex;justify-content:space-between;align-items:center">
+  <div>
+    <div style="font-size:18px;font-weight:900;letter-spacing:-.3px">FinCalc Smart<span style="color:#1DB584">.</span></div>
+    <div style="font-size:11px;opacity:.5;margin-top:2px">fincalcsmart.com</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:13px;font-weight:700" id="print-calc-title">Financial Calculator</div>
+    <div style="font-size:11px;opacity:.45;margin-top:2px" id="print-date"></div>
+  </div>
+</div>
+<div id="print-footer" style="display:none">⚠️ Results are estimates for informational purposes only. Not financial advice — consult a licensed professional before making financial decisions.<br/><strong>© 2026 FinCalc Smart</strong> · fincalcsmart.com · contact@fincalcsmart.com</div>
+
+<div class="calc-wrapper">
+<div class="calc-main">
+<div class="calc-split">
+  <div class="calc-inputs">
+    <div class="calc-inputs-header">
+      <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1 0-4h14v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><circle cx="17" cy="14" r="1"/></svg></div>
+      <h2>Withdrawal Details</h2>
+    </div>
+    <div class="form-grid">
+      <div class="form-row"><label for="bal">Retirement Savings</label><div class="input-prefix"><span>$</span><input type="number" id="bal" value="900000" oninput="c()"></div></div>
+      <div class="form-row"><label for="wd">Annual Withdrawal (today's $)</label><div class="input-prefix"><span>$</span><input type="number" id="wd" value="45000" oninput="c()"></div></div>
+      <div class="form-row"><label for="ret">Portfolio Return Rate</label><div class="input-suffix"><span>%</span><input type="number" id="ret" value="5" step="0.1" oninput="c()"></div></div>
+      <div class="form-row"><label for="inf">Annual Inflation Rate</label><div class="input-suffix"><span>%</span><input type="number" id="inf" value="2.5" step="0.1" oninput="c()"></div></div>
+      <div class="form-row"><label for="retAge">Retirement Age</label><input type="number" id="retAge" value="65" oninput="c()"></div>
+      <div class="form-row"><label for="gov">Annual CPP + OAS / Social Security</label><div class="input-prefix"><span>$</span><input type="number" id="gov" value="14000" oninput="c()"></div></div>
+    </div>
+    <button class="calc-btn span-2" aria-label="Calculate" onclick="c()">Calculate</button>
+  </div>
+  <div class="calc-results-panel">
+    <div class="calc-results-numbers">
+      <div class="results-header">
+        <h3>Results</h3>
+        <div class="results-actions">
+          <button class="res-btn res-share" onclick="shareURL()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="13" cy="3" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="3" cy="8" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="13" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.2L11.5 4M4.5 8.8L11.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Share
+          </button>
+          <button class="res-btn res-print" onclick="printCalc()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="3" y="1" width="10" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M3 5.5H1a1 1 0 0 0-1 1V12a1 1 0 0 0 1 1h2v-3h10v3h2a1 1 0 0 0 1-1V6.5a1 1 0 0 0-1-1h-2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="10" width="10" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            Print
+          </button>
+        </div>
+      </div>
+      <div class="result-grid">
+        <div class="result-item"><div class="label">Withdrawal Rate</div><div class="value " id="wdRate">—</div></div>
+        <div class="result-item"><div class="label">Portfolio Lasts Until</div><div class="value teal" id="lastsTo">—</div></div>
+        <div class="result-item"><div class="label">Balance at Age 90</div><div class="value " id="at90">—</div></div>
+        <div class="result-item"><div class="label">Net Annual Need from Portfolio</div><div class="value teal" id="netNeed">—</div></div>
+      </div>
+    </div>
+    <div class="calc-results-chart">
+      <div class="chart-tabs-sm">
+        <button class="chart-tab-sm active" onclick="showChart('line')">Portfolio Over Retirement</button>
+      </div>
+      <div class="chart-container"><canvas id="ch"></canvas></div>
+      <div class="chart-legend" id="leg"></div>
+    </div>
+  </div>
+</div><div class="content-card">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the RRIF minimum withdrawal?</button><div class="faq-a">Convert RRSP to RRIF by age 71. RRIF minimums by age: 71 = 5.28%, 75 = 5.82%, 80 = 6.82%, 85 = 8.51%, 90 = 11.92%, 95+ = 20%. These are minimums — you can withdraw more. Strategic planning: draw down RRSP earlier (before 71) in low-income years to reduce forced RRIF withdrawals later.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What are RMDs in the USA?</button><div class="faq-a">SECURE 2.0 Act raised the Required Minimum Distribution age to 73 (born 1951–1959) or 75 (born 1960+). Failure to take RMDs triggers a 25% excise tax. RMD amount = account balance ÷ IRS life expectancy factor. Traditional IRAs and most 401(k)s are subject to RMDs; Roth IRAs are not.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is sequence-of-returns risk?</button><div class="faq-a">Getting poor returns early in retirement can be catastrophic. If markets drop 40% in year 1 and you're withdrawing 4%, your portfolio shrinks so much it may never recover. Mitigation: keep 1–2 years of cash, reduce withdrawals in down years, or maintain part-time income flexibility in early retirement.</div></div>
+</div><div class="disclaimer">&#9888;&#65039; Projections use straight-line return assumption. Real returns vary. Consider Monte Carlo simulation via FIRE Calculator.</div>
+</div>
+<div class="calc-sidebar">
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:250px;background:white;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:22px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+  <div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+      <div style="width:32px;height:32px;background:#e8f5e9;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <span style="color:#1b5e20;font-weight:700;font-size:0.95rem;">EQ Bank</span>
+    </div>
+    <div style="color:#111827;font-size:1.1rem;font-weight:700;line-height:1.3;margin-bottom:8px;">Earn 4.00%* on your savings</div>
+    <div style="color:#6b7280;font-size:0.78rem;line-height:1.6;">Canada's leading digital bank. No monthly fees. No minimum balance. CDIC insured deposits.</div>
+  </div>
+  <div>
+    <div style="background:#2e7d32;color:white;font-size:0.82rem;font-weight:700;padding:10px 18px;border-radius:8px;display:inline-block;cursor:pointer;">Open a Free Account</div>
+    <div style="color:#9ca3af;font-size:0.6rem;margin-top:8px;">*Rate subject to change. Conditions apply.</div>
+  </div>
+</div></div>
+  <div class="related-card"><h4>Related Calculators</h4><ul class="related-list"><li><a href="retirement-planning.html">Retirement Planning</a></li><li><a href="fire.html">FIRE Calculator</a></li><li><a href="asset-allocation.html">Asset Allocation</a></li><li><a href="annuity.html">Annuity Calculator</a></li><li><a href="income-tax.html">Income Tax</a></li><li><a href="capital-gains-tax.html">Capital Gains Tax</a></li></ul></div>
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:600px;background:linear-gradient(180deg,#0d1f35 0%,#152a45 50%,#0d1f35 100%);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;padding:28px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.2);gap:0;">
+  <div style="color:#c9a84c;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;">TD Canada Trust</div>
+  <div style="color:white;font-size:1.5rem;font-weight:700;line-height:1.2;margin-bottom:12px;">Your first home<br>starts here.</div>
+  <div style="color:rgba(255,255,255,0.6);font-size:0.82rem;line-height:1.65;margin-bottom:24px;">TD mortgage specialists are ready to help. Get pre-approved online in 3 minutes and lock in your rate for 120 days.</div>
+  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px;margin-bottom:24px;">
+    <div style="color:rgba(255,255,255,0.45);font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">5-Year Fixed</div>
+    <div style="color:#c9a84c;font-size:2.2rem;font-weight:700;line-height:1;">4.94%</div>
+    <div style="color:rgba(255,255,255,0.4);font-size:0.7rem;margin-top:4px;">APR 5.02% — as low as</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px;margin-bottom:auto;">
+    <div style="color:rgba(255,255,255,0.45);font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Variable Rate</div>
+    <div style="color:white;font-size:2rem;font-weight:700;line-height:1;">Prime − 0.10%</div>
+    <div style="color:rgba(255,255,255,0.4);font-size:0.7rem;margin-top:4px;">Currently 6.85%</div>
+  </div>
+  <div style="margin-top:24px;">
+    <div style="background:#c9a84c;color:#0d1f35;font-size:0.88rem;font-weight:700;padding:13px 18px;border-radius:9px;text-align:center;cursor:pointer;margin-bottom:10px;">Get Pre-Approved Today</div>
+    <div style="color:rgba(255,255,255,0.3);font-size:0.6rem;text-align:center;line-height:1.5;">OAC. Rates subject to change. TD Bank Group.</div>
+  </div>
+</div></div>
+</div>
+</div>
+<script>function safeNum(v,fallback=0){
+  const n=parseFloat(v);
+  return(!isFinite(n)||isNaN(n))?fallback:n;
+}
+
+let country='us', ch=null;
+function fmt(n){return '$'+Math.round(Math.max(0,n)).toLocaleString();}
+
+function setCountry(co){country=co;document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.toggle('active',b.dataset.country===co));c();}
+function c(){
+  const bal=parseFloat(document.getElementById('bal').value)||0;
+  const wd=parseFloat(document.getElementById('wd').value)||0;
+  const ret=(parseFloat(document.getElementById('ret').value)||0)/100;
+  const inf=(parseFloat(document.getElementById('inf').value)||0)/100;
+  const retAge=parseInt(document.getElementById('retAge').value)||65;
+  const gov=parseFloat(document.getElementById('gov').value)||0;
+  const netNeed=Math.max(0,wd-gov);
+  const wdRate=bal>0?(netNeed/bal*100):0;
+  document.getElementById('wdRate').textContent=wdRate.toFixed(1)+'%';
+  document.getElementById('netNeed').textContent='$'+Math.round(netNeed).toLocaleString()+'/yr';
+  let b=bal; let yr=0; let depleted=false; const data=[]; const labels=[];
+  for(let y=0;y<40;y++){
+    const annWd=netNeed*Math.pow(1+inf,y);
+    b=b*(1+ret)-annWd;
+    labels.push('Age '+(retAge+y+1));
+    data.push(Math.round(Math.max(0,b)));
+    if(b<=0&&!depleted){depleted=true;yr=y+1;b=0;}
+  }
+  const at90=data[Math.min(90-retAge-1,data.length-1)]||0;
+  document.getElementById('lastsTo').textContent=depleted?'Age '+(retAge+yr):'Age 90+';
+  document.getElementById('at90').textContent='$'+Math.round(at90).toLocaleString();
+  try{if(ch)ch.destroy();}catch(e){ch=null;}
+  const ctx=document.getElementById('ch').getContext('2d');
+  ch=new window.Chart(ctx,{type:'line',data:{labels,datasets:[{label:'Portfolio',data,borderColor:'#0ea5a0',backgroundColor:'rgba(14,165,160,0.1)',fill:true,tension:0.3,pointRadius:0,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{callback:v=>'$'+Math.round(v/1000)+'k'}},x:{grid:{display:false},ticks:{maxTicksLimit:10}}}}});
+  document.getElementById('leg').innerHTML='<div class="legend-item"><div class="legend-dot" style="background:#0ea5a0"></div>Portfolio Balance</div>';
+}
+function showChart(m){c();}
+document.addEventListener('DOMContentLoaded',()=>{c();});
+</script>
+
+<!-- Print-only branded header/footer -->
+<script>
+/* ══ SHARE URL & PRINT ═══════════════════════════════════════════════════ */
+function shareURL(){
+  // Build URL with all current inputs encoded as params
+  var params = new URLSearchParams();
+  document.querySelectorAll('input[id],select[id]').forEach(function(el){
+    if(el.id && el.value !== '') params.set(el.id, el.value);
+  });
+  var activeBtn = document.querySelector('.cw-tbtn.on');
+  if(activeBtn && activeBtn.dataset.mode) params.set('mode', activeBtn.dataset.mode);
+  var shareLink = location.href.split('?')[0] + '?' + params.toString();
+  // Update URL bar (no reload)
+  try { history.replaceState({}, '', '?' + params.toString()); } catch(e){}
+  // Try clipboard first, always show modal as fallback
+  if(navigator.clipboard && typeof navigator.clipboard.writeText === 'function'){
+    navigator.clipboard.writeText(shareLink)
+      .then(function(){ showShareModal(shareLink, true); })
+      .catch(function(){ showShareModal(shareLink, false); });
+  } else {
+    showShareModal(shareLink, false);
+  }
+}
+
+function showShareModal(url, alreadyCopied){
+  var old = document.getElementById('fcs-share-modal'); if(old) old.remove();
+  var overlay = document.createElement('div');
+  overlay.id = 'fcs-share-modal';
+  overlay.style.cssText = [
+    'position:fixed','inset:0','background:rgba(6,15,26,0.7)',
+    'z-index:99999','display:flex','align-items:center',
+    'justify-content:center','padding:20px','font-family:inherit'
+  ].join(';');
+  var card = document.createElement('div');
+  card.style.cssText = [
+    'background:#fff','border-radius:16px','padding:32px',
+    'max-width:540px','width:100%','box-shadow:0 32px 80px rgba(0,0,0,0.4)',
+    'position:relative','font-family:inherit'
+  ].join(';');
+  var copied = alreadyCopied
+    ? '<div style="background:#E6F7F1;border:1px solid #1DB584;border-radius:8px;padding:10px 16px;font-size:13px;color:#0a5c3a;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg width=14 height=14 viewBox="0 0 16 16" fill=none><path d="M3 8l3.5 3.5L13 4" stroke="#1DB584" stroke-width=2 stroke-linecap=round stroke-linejoin=round/></svg>Link copied to clipboard!</div>'
+    : '';
+  card.innerHTML = ''
+    + '<div style="font-size:18px;font-weight:800;color:#0D1B2A;margin-bottom:6px">Share this Calculation</div>'
+    + '<div style="font-size:13px;color:#6B7A8D;margin-bottom:16px">Anyone with this link will see your exact inputs pre-filled.</div>'
+    + copied
+    + '<div style="font-size:12px;font-weight:600;color:#9BA8B5;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em">Shareable Link</div>'
+    + '<div style="display:flex;gap:8px;margin-bottom:20px">'
+    + '<input id="fcs-share-input" readonly value="' + url.replace(/"/g, '&quot;') + '" '
+    + 'style="flex:1;padding:10px 12px;border:1.5px solid #E4E9EF;border-radius:8px;font-size:12px;color:#374151;font-family:monospace;min-width:0;background:#F8FAFB" />'
+    + '<button id="fcs-copy-btn" style="background:#1DB584;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0">Copy</button>'
+    + '</div>'
+    + '<button id="fcs-close-btn" style="width:100%;padding:10px;border:1.5px solid #E4E9EF;border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:#6B7A8D;cursor:pointer">Close</button>';
+  overlay.appendChild(card);
+  document.body.appendChild(overlay);
+  // Wire copy button
+  var inp = document.getElementById('fcs-share-input');
+  var copyBtn = document.getElementById('fcs-copy-btn');
+  copyBtn.addEventListener('click', function(){
+    inp.select(); inp.setSelectionRange(0,99999);
+    try {
+      if(navigator.clipboard){ navigator.clipboard.writeText(url); }
+      else { document.execCommand('copy'); }
+    } catch(e){ document.execCommand('copy'); }
+    copyBtn.textContent = '✓ Copied!';
+    copyBtn.style.background = '#18a073';
+    setTimeout(function(){ copyBtn.textContent='Copy'; copyBtn.style.background='#1DB584'; }, 2000);
+  });
+  // Wire close
+  document.getElementById('fcs-close-btn').addEventListener('click', function(){ overlay.remove(); });
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.remove(); });
+  // Auto-select input
+  setTimeout(function(){ if(inp){ inp.focus(); inp.select(); }}, 100);
+}
+
+function printCalc(){
+  // Set print date in branded header
+  var d = document.getElementById('print-date');
+  if(d) d.textContent = 'Generated: ' + new Date().toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
+  var btn = document.querySelector('.res-print');
+  var orig = btn ? btn.innerHTML : '';
+  if(btn){ btn.innerHTML = 'Sending...'; btn.style.opacity = '.6'; }
+  setTimeout(function(){
+    window.print();
+    setTimeout(function(){ if(btn){ btn.innerHTML = orig; btn.style.opacity = '1'; }}, 1500);
+  }, 200);
+}
+
+function loadFromURL(){
+  var p = new URLSearchParams(location.search);
+  if(!p.toString()) return;
+  var loaded = false;
+  p.forEach(function(v,k){
+    if(k === 'mode') return;
+    var el = document.getElementById(k);
+    if(el){ el.value = v; loaded = true; }
+  });
+  var mode = p.get('mode');
+  if(mode){
+    document.querySelectorAll('.cw-tbtn').forEach(function(b){
+      b.classList.toggle('on', b.dataset.mode === mode);
+    });
+    if(typeof setCountry === 'function') setCountry(mode);
+    else if(typeof setMode === 'function') setMode(mode);
+  }
+  if(loaded){
+    if(typeof calc === 'function') calc();
+    else if(typeof c === 'function') c();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFromURL);
+
+</script>
+<script src="../shared.js"></script>
+</body></html>

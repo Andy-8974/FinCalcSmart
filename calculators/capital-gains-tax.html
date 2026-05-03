@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Gains Tax Calculator — USA & Canada 2026 | FinCalc Smart</title>
+<meta name="description" content="Calculate capital gains tax for USA and Canada 2026. Includes long-term vs short-term rates, Canadian 50% inclusion rate, and provincial taxes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Capital Gains Tax Calculator — USA & Canada 2026 | FinCalc Smart",
+  "description": "Calculate capital gains tax for USA and Canada 2026. Includes long-term vs short-term rates, Canadian 50% inclusion rate, and provincial taxes.",
+  "url": "https://fincalcsmart.com/calculators/capital-gains-tax.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "FinCalc Smart"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Canada's capital gains inclusion rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Canada taxes 50% of capital gains as income for individuals (the 'inclusion rate'). Budget 2024 proposed increasing this to 2/3 for gains over $250,000/year, but implementation has been delayed — 50% "
+      }
+    },    {
+      "@type": "Question",
+      "name": "Is my primary residence exempt from capital gains in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — the Principal Residence Exemption (PRE) shields gains on your home from tax in Canada. You must designate the property as your principal residence for each year you owned it. You can only design"
+      }
+    },    {
+      "@type": "Question",
+      "name": "How do long-term capital gains rates work in the USA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long-term gains (assets held over 1 year) are taxed at 0%, 15%, or 20% depending on your total income. In 2026: 0% up to $48,350 (single), 15% up to $533,400, 20% above that. Short-term gains are taxe"
+      }
+    },    {
+      "@type": "Question",
+      "name": "Is cryptocurrency taxed as capital gains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in both Canada and the USA. Every crypto trade, sale, or exchange (including crypto-to-crypto) is a taxable event. Canada: 50% inclusion rate on crypto gains. USA: Long-term if held over 1 year, "
+      }
+    },    {
+      "@type": "Question",
+      "name": "What is tax-loss harvesting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selling investments at a loss to offset capital gains tax. USA: Capital losses can offset gains dollar-for-dollar, plus up to $3,000 of ordinary income/year. Losses carry forward indefinitely. Canada:"
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style id="cw-body-font">body,body *{font-family:'Plus Jakarta Sans',sans-serif!important}</style>
+
+<meta property="og:site_name" content="FinCalc Smart"/>
+<meta property="og:url" content="https://fincalcsmart.com/calculators/capital-gains-tax.html"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="FinCalc Smart"/>
+  <meta property="og:title" content="Capital Gains Tax Calculator — USA & Canada 2026 | FinCalc Smart"/>
+  <meta property="og:description" content="Calculate capital gains tax for USA and Canada 2026. Includes long-term vs short-term rates, Canadian 50% inclusion rate, and provincial taxes."/>
+  <meta property="og:url" content="https://fincalcsmart.com/calculators/capital-gains-tax.html"/>
+  <meta property="og:image" content="https://fincalcsmart.com/favicon.svg"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Capital Gains Tax Calculator — USA & Canada 2026 | FinCalc Smart"/>
+  <meta name="twitter:description" content="Calculate capital gains tax for USA and Canada 2026. Includes long-term vs short-term rates, Canadian 50% inclusion rate, and provincial taxes."/>
+  <link rel="canonical" href="https://fincalcsmart.com/calculators/capital-gains-tax.html"/>
+</head>
+<body>
+<script src="../nav.js"></script>
+<div class="calc-hero"><div class="calc-hero-inner">
+  <h1>Capital Gains Tax Calculator</h1>
+  <p>Calculate your capital gains tax for USA and Canada 2026 — stocks, real estate, crypto, and more.</p>
+  <div class="country-toggle">
+    <div class="cw-toggle"><button class="cw-tbtn on" data-mode="us"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;flex-shrink:0"><rect width="20" height="14" fill="#B22234"/><rect y="1.08" width="20" height="1.08" fill="#fff"/><rect y="3.23" width="20" height="1.08" fill="#fff"/><rect y="5.38" width="20" height="1.08" fill="#fff"/><rect y="7.54" width="20" height="1.08" fill="#fff"/><rect y="9.69" width="20" height="1.08" fill="#fff"/><rect y="11.85" width="20" height="1.08" fill="#fff"/><rect width="8" height="7.54" fill="#3C3B6E"/><circle cx="1.3" cy="1.1" r=".55" fill="#fff"/><circle cx="2.65" cy="1.1" r=".55" fill="#fff"/><circle cx="4" cy="1.1" r=".55" fill="#fff"/><circle cx="5.35" cy="1.1" r=".55" fill="#fff"/><circle cx="6.7" cy="1.1" r=".55" fill="#fff"/><circle cx="1.97" cy="2.32" r=".55" fill="#fff"/><circle cx="3.32" cy="2.32" r=".55" fill="#fff"/><circle cx="4.67" cy="2.32" r=".55" fill="#fff"/><circle cx="6.02" cy="2.32" r=".55" fill="#fff"/><circle cx="1.3" cy="3.54" r=".55" fill="#fff"/><circle cx="2.65" cy="3.54" r=".55" fill="#fff"/><circle cx="4" cy="3.54" r=".55" fill="#fff"/><circle cx="5.35" cy="3.54" r=".55" fill="#fff"/><circle cx="6.7" cy="3.54" r=".55" fill="#fff"/><circle cx="1.97" cy="4.77" r=".55" fill="#fff"/><circle cx="3.32" cy="4.77" r=".55" fill="#fff"/><circle cx="4.67" cy="4.77" r=".55" fill="#fff"/><circle cx="6.02" cy="4.77" r=".55" fill="#fff"/><circle cx="1.3" cy="6" r=".55" fill="#fff"/><circle cx="2.65" cy="6" r=".55" fill="#fff"/><circle cx="4" cy="6" r=".55" fill="#fff"/><circle cx="5.35" cy="6" r=".55" fill="#fff"/><circle cx="6.7" cy="6" r=".55" fill="#fff"/></svg>&nbsp;USA</button><button class="cw-tbtn" data-mode="ca"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;flex-shrink:0"><rect width="20" height="14" fill="#fff"/><rect width="5" height="14" fill="#D52B1E"/><rect x="15" width="5" height="14" fill="#D52B1E"/><path d="M10 2L10.5 4.2 12.5 3.5 11.5 5.2 13.5 5.5 12 6.8 13 8.5 10.8 7.8 10.8 11H9.2L9.2 7.8 7 8.5 8 6.8 6.5 5.5 8.5 5.2 7.5 3.5 9.5 4.2Z11.4 7.1L12.3 9.8L10 8.2L7.7 9.8L8.6 7.1L6.4 5.5H9.1Z" fill="#D52B1E"/></svg>&nbsp;Canada</button></div>
+  </div>
+</div></div>
+<div id="print-header" style="display:none" style="display:flex;justify-content:space-between;align-items:center">
+  <div>
+    <div style="font-size:18px;font-weight:900;letter-spacing:-.3px">FinCalc Smart<span style="color:#1DB584">.</span></div>
+    <div style="font-size:11px;opacity:.5;margin-top:2px">fincalcsmart.com</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:13px;font-weight:700" id="print-calc-title">Financial Calculator</div>
+    <div style="font-size:11px;opacity:.45;margin-top:2px" id="print-date"></div>
+  </div>
+</div>
+<div id="print-footer" style="display:none">⚠️ Results are estimates for informational purposes only. Not financial advice — consult a licensed professional before making financial decisions.<br/><strong>© 2026 FinCalc Smart</strong> · fincalcsmart.com · contact@fincalcsmart.com</div>
+
+<div class="calc-wrapper">
+<div class="calc-main">
+<div class="calc-split">
+  <!-- INPUTS -->
+  <div class="calc-inputs">
+    <div class="calc-inputs-header">
+      <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+      <h2>Gain Details</h2>
+    </div>
+    <div class="form-grid">
+      <div class="form-row"><label for="assetType">Asset Type</label>
+        <select id="assetType" onchange="calc()">
+          <option value="stock">Stocks / ETFs / Mutual Funds</option>
+          <option value="realestate">Real Estate</option>
+          <option value="crypto">Cryptocurrency</option>
+          <option value="other">Other Capital Asset</option>
+        </select>
+      </div>
+      <div class="form-row"><label for="costBasis">Purchase Price (Cost Basis)</label><div class="input-prefix"><span>$</span><input type="number" id="costBasis" value="10000" oninput="calc()"></div></div>
+      <div class="form-row"><label for="salePrice">Sale Price</label><div class="input-prefix"><span>$</span><input type="number" id="salePrice" value="25000" oninput="calc()"></div></div>
+      <div class="form-row"><label for="fees">Transaction Costs / Fees</label><div class="input-prefix"><span>$</span><input type="number" id="fees" value="0" oninput="calc()"></div></div>
+      <!-- US specific -->
+      <div class="form-row us-field"><label>Holding Period</label>
+        <select id="holdPeriod" onchange="calc()">
+          <option value="long">Long-term (over 1 year)</option>
+          <option value="short">Short-term (1 year or less)</option>
+        </select>
+      </div>
+      <div class="form-row us-field"><label>Filing Status</label>
+        <select id="filingStatus" onchange="calc()">
+          <option value="single">Single</option>
+          <option value="mfj">Married Filing Jointly</option>
+          <option value="mfs">Married Filing Separately</option>
+          <option value="hoh">Head of Household</option>
+        </select>
+      </div>
+      <div class="form-row us-field"><label>Other Income (Annual)</label><div class="input-prefix"><span>$</span><input type="number" id="otherIncome" value="75000" oninput="calc()"></div></div>
+      <div class="form-row us-field"><label>State</label>
+        <select id="usState" onchange="calc()">
+          <option value="0">No state income tax</option>
+          <option value="0.1399">California (13.3%)</option>
+          <option value="0.109">New York (10.9%)</option>
+          <option value="0.099">Oregon (9.9%)</option>
+          <option value="0.0985">Minnesota (9.85%)</option>
+          <option value="0.0575">Virginia (5.75%)</option>
+          <option value="0.05">Massachusetts (5%)</option>
+          <option value="0.044">Colorado (4.4%)</option>
+          <option value="0.0307">Pennsylvania (3.07%)</option>
+          <option value="0.025">Arizona (2.5%)</option>
+          <option value="0">Texas (0%)</option>
+          <option value="0">Florida (0%)</option>
+          <option value="0">Nevada (0%)</option>
+          <option value="0">Washington (0%)*</option>
+        </select>
+      </div>
+      <!-- Canada specific -->
+      <div class="form-row ca-field" style="display:none"><label>Province</label>
+        <select id="caProvince" onchange="calc()">
+          <option value="ON">Ontario</option>
+          <option value="BC">British Columbia</option>
+          <option value="AB">Alberta</option>
+          <option value="QC">Quebec</option>
+          <option value="MB">Manitoba</option>
+          <option value="SK">Saskatchewan</option>
+          <option value="NS">Nova Scotia</option>
+          <option value="NB">New Brunswick</option>
+          <option value="PE">PEI</option>
+          <option value="NL">Newfoundland</option>
+        </select>
+      </div>
+      <div class="form-row ca-field" style="display:none"><label>Other Income (Annual)</label><div class="input-prefix"><span>$</span><input type="number" id="caOtherIncome" value="80000" oninput="calc()"></div></div>
+      <div class="form-row ca-field" style="display:none"><label>Principal Residence?</label>
+        <select id="isPrimary" onchange="calc()">
+          <option value="no">No</option>
+          <option value="yes">Yes (exempt from tax)</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn span-2" aria-label="Calculate Tax" onclick="calc()">Calculate Tax</button>
+  </div>
+  <!-- RESULTS -->
+  <div class="calc-results-panel">
+    <div class="calc-results-numbers">
+      <div class="results-header">
+        <h3>Results</h3>
+        <div class="results-actions">
+          <button class="res-btn res-share" onclick="shareURL()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="13" cy="3" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="3" cy="8" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="13" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.2L11.5 4M4.5 8.8L11.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Share
+          </button>
+          <button class="res-btn res-print" onclick="printCalc()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="3" y="1" width="10" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M3 5.5H1a1 1 0 0 0-1 1V12a1 1 0 0 0 1 1h2v-3h10v3h2a1 1 0 0 0 1-1V6.5a1 1 0 0 0-1-1h-2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="10" width="10" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            Print
+          </button>
+        </div>
+      </div>
+      <div class="result-grid">
+        <div class="result-item"><div class="label">Capital Gain</div><div class="value teal" id="gainAmt">—</div></div>
+        <div class="result-item"><div class="label">Federal Tax</div><div class="value" id="fedTax">—</div></div>
+        <div class="result-item"><div class="label" id="provStateLbl">State / Prov Tax</div><div class="value" id="provTax">—</div></div>
+        <div class="result-item"><div class="label">Total Tax Owed</div><div class="value teal" id="totalTax">—</div></div>
+        <div class="result-item"><div class="label">Effective Rate</div><div class="value" id="effRate">—</div></div>
+        <div class="result-item"><div class="label">Net Proceeds</div><div class="value teal" id="netProceeds">—</div></div>
+      </div>
+    </div>
+    <div class="calc-results-chart">
+      <div class="chart-container"><canvas id="cgChart"></canvas></div>
+      <div class="chart-legend" id="chartLegend"></div>
+    </div>
+  </div>
+</div>
+
+<div class="content-card" id="breakdownCard">
+  <h2>Tax Breakdown</h2>
+  <div id="taxBreakdown"></div>
+</div>
+
+<div class="content-card">
+  <h2 id="ratesTitle">USA Capital Gains Rates 2026</h2>
+  <div id="ratesContent"></div>
+</div>
+
+<div class="content-card">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is Canada's capital gains inclusion rate?</button><div class="faq-a">Canada taxes 50% of capital gains as income for individuals (the "inclusion rate"). Budget 2024 proposed increasing this to 2/3 for gains over $250,000/year, but implementation has been delayed — 50% still applies for most individual situations. Always verify with CRA for the latest rules.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is my primary residence exempt from capital gains in Canada?</button><div class="faq-a">Yes — the Principal Residence Exemption (PRE) shields gains on your home from tax in Canada. You must designate the property as your principal residence for each year you owned it. You can only designate one property per family unit per year. Rental properties and cottages may be partially exempt if you lived there part-time.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do long-term capital gains rates work in the USA?</button><div class="faq-a">Long-term gains (assets held over 1 year) are taxed at 0%, 15%, or 20% depending on your total income. In 2026: 0% up to $48,350 (single), 15% up to $533,400, 20% above that. Short-term gains are taxed as ordinary income (up to 37%). The difference can be enormous — holding an asset just over 1 year can save tens of thousands.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is cryptocurrency taxed as capital gains?</button><div class="faq-a">Yes, in both Canada and the USA. Every crypto trade, sale, or exchange (including crypto-to-crypto) is a taxable event. Canada: 50% inclusion rate on crypto gains. USA: Long-term if held over 1 year, short-term otherwise. NFTs, staking rewards, and airdrops have additional rules. Keep detailed records of every transaction including dates and values in CAD/USD at time of transaction.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is tax-loss harvesting?</button><div class="faq-a">Selling investments at a loss to offset capital gains tax. USA: Capital losses can offset gains dollar-for-dollar, plus up to $3,000 of ordinary income/year. Losses carry forward indefinitely. Canada: Net capital losses can only offset capital gains — not other income. Unused losses carry back 3 years or forward indefinitely. Watch the 30-day superficial loss rule (Canada) and wash sale rule (USA).</div></div>
+</div>
+<div class="disclaimer">⚠️ 2026 tax rates — estimates only. Tax rules change frequently. Canada's inclusion rate changes are pending legislation. Consult a tax professional (CPA/CGA) for advice.</div>
+</div>
+
+<div class="calc-sidebar">
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:250px;background:white;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:22px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+  <div>
+    <div style="color:#d4001a;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Scotiabank</div>
+    <div style="color:#111827;font-size:1.1rem;font-weight:700;line-height:1.3;margin-bottom:8px;">The Passport® Visa Infinite — $0 foreign transaction fees</div>
+    <div style="color:#6b7280;font-size:0.78rem;line-height:1.5;">Earn 3x Scene+ points on groceries. Travel insurance included. Annual fee waived first year.</div>
+  </div>
+  <div>
+    <div style="background:#d4001a;color:white;font-size:0.82rem;font-weight:700;padding:10px 18px;border-radius:8px;display:inline-block;cursor:pointer;">Apply Now →</div>
+    <div style="color:#9ca3af;font-size:0.6rem;margin-top:8px;">Min. income $60,000/yr. Subject to approval.</div>
+  </div>
+</div></div>
+  <div class="related-card"><h4>Related Calculators</h4><ul class="related-list">
+    <li><a href="income-tax.html">Income Tax</a></li>
+    <li><a href="investment-fees.html">Investment Fees</a></li>
+    <li><a href="compound-interest.html">Compound Interest</a></li>
+    <li><a href="tfsa.html">TFSA Calculator</a></li>
+    <li><a href="roi.html">ROI Calculator</a></li>
+  </ul></div>
+
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:600px;background:white;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;padding:28px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+  <div style="color:#0066cc;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;">Sun Life Financial</div>
+  <div style="color:#111827;font-size:1.4rem;font-weight:700;line-height:1.25;margin-bottom:12px;">Protect what<br>matters most.</div>
+  <div style="color:#6b7280;font-size:0.82rem;line-height:1.65;margin-bottom:22px;">Term life insurance from $20/month. Get a quote in 60 seconds — no medical exam required for coverage up to $1M.</div>
+  <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px;">
+    <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:9px;padding:14px;">
+      <div style="color:#0369a1;font-size:0.72rem;font-weight:700;margin-bottom:4px;">✓ 10-Year Term</div>
+      <div style="color:#111827;font-size:1.1rem;font-weight:700;">From $18/mo</div>
+      <div style="color:#6b7280;font-size:0.72rem;">$500K coverage</div>
+    </div>
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:9px;padding:14px;">
+      <div style="color:#15803d;font-size:0.72rem;font-weight:700;margin-bottom:4px;">✓ 20-Year Term</div>
+      <div style="color:#111827;font-size:1.1rem;font-weight:700;">From $29/mo</div>
+      <div style="color:#6b7280;font-size:0.72rem;">$500K coverage</div>
+    </div>
+    <div style="background:#faf5ff;border:1px solid #e9d5ff;border-radius:9px;padding:14px;">
+      <div style="color:#7c3aed;font-size:0.72rem;font-weight:700;margin-bottom:4px;">✓ Whole Life</div>
+      <div style="color:#111827;font-size:1.1rem;font-weight:700;">Builds cash value</div>
+      <div style="color:#6b7280;font-size:0.72rem;">Lifelong protection</div>
+    </div>
+  </div>
+  <div style="background:#0066cc;color:white;font-size:0.88rem;font-weight:700;padding:13px 18px;border-radius:9px;text-align:center;cursor:pointer;margin-bottom:10px;">Get Free Quote →</div>
+  <div style="color:#9ca3af;font-size:0.6rem;text-align:center;line-height:1.5;">Sun Life Assurance Company of Canada. Subject to underwriting.</div>
+</div></div>
+</div>
+</div>
+
+<script>
+/* ── Input validation & NaN guard ────────────────────────────── */
+function safeVal(v,fallback){
+  if(v===null||v===undefined||v===''||isNaN(v)||!isFinite(v)) return fallback!==undefined?fallback:'—';
+  return v;
+}
+function fmtGuard(v,prefix,suffix,decimals){
+  if(v===null||v===undefined||isNaN(v)||!isFinite(v)||v<0) return '—';
+  var n=typeof decimals==='number'?Number(v).toFixed(decimals):Math.round(v);
+  var s=Number(n).toLocaleString('en-CA');
+  return (prefix||'')+s+(suffix||'');
+}
+
+let country='us', cgChart=null;
+function fmt(n){return '$'+Math.round(n).toLocaleString();}
+function setCountry(c){
+  country=c;
+  document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.toggle('active',b.dataset.country===c));
+  document.querySelectorAll('.us-field').forEach(el=>el.style.display=c==='us'?'':'none');
+  document.querySelectorAll('.ca-field').forEach(el=>el.style.display=c==='ca'?'':'none');
+  document.getElementById('provStateLbl').textContent=c==='ca'?'Provincial Tax':'State Tax';
+  calc();
+}
+
+// US long-term rates 2026
+const usLTRates={
+  single:   [{max:48350,r:0},{max:533400,r:0.14},{max:Infinity,r:0.20}],
+  mfj:      [{max:96700,r:0},{max:600050,r:0.15},{max:Infinity,r:0.20}],
+  mfs:      [{max:48350,r:0},{max:300000,r:0.15},{max:Infinity,r:0.20}],
+  hoh:      [{max:64750,r:0},{max:566700,r:0.15},{max:Infinity,r:0.20}],
+};
+// US ordinary brackets 2026 (single simplified)
+const usOrd={
+  single:   [{max:11925,r:0.10},{max:48475,r:0.12},{max:103350,r:0.22},{max:197300,r:0.24},{max:250525,r:0.32},{max:626350,r:0.35},{max:Infinity,r:0.37}],
+  mfj:      [{max:23850,r:0.10},{max:96950,r:0.12},{max:206700,r:0.22},{max:394600,r:0.24},{max:501050,r:0.32},{max:751600,r:0.35},{max:Infinity,r:0.37}],
+  mfs:      [{max:11925,r:0.10},{max:48475,r:0.12},{max:103350,r:0.22},{max:197300,r:0.24},{max:250525,r:0.32},{max:375800,r:0.35},{max:Infinity,r:0.37}],
+  hoh:      [{max:17000,r:0.10},{max:64850,r:0.12},{max:103350,r:0.22},{max:197300,r:0.24},{max:250500,r:0.32},{max:626350,r:0.35},{max:Infinity,r:0.37}],
+};
+
+// CA provincial top marginal rates on capital gains (applied to 50% inclusion)
+const caProvRates={ON:0.5353,BC:0.535,AB:0.48,QC:0.5364,MB:0.5040,SK:0.4750,NS:0.54,NB:0.5225,PE:0.51,NL:0.5492};
+// CA federal brackets 2026
+const caFedBrackets=[{max:57375,r:0.15},{max:114750,r:0.205},{max:158519,r:0.26},{max:220000,r:0.29},{max:Infinity,r:0.33}];
+const caFedBPA=16452;
+
+function calcBrackets(income,brackets){
+  let tax=0,prev=0,marginalRate=0;
+  for(const b of brackets){
+    if(income<=prev)break;
+    const chunk=Math.min(income,b.max)-prev;
+    tax+=chunk*b.r; prev=b.max; marginalRate=b.r;
+  }
+  return{tax,marginalRate};
+}
+
+function getLTRate(income,gain,status){
+  const brackets=usLTRates[status];
+  // Preferential stacking: ordinary income uses lower brackets first
+  let rate=0;
+  for(const b of brackets){if(income+gain>b.max){rate=b.r;}else break;}
+  // More precise: portion in each bracket
+  let tax=0,prev=0;
+  for(const b of brackets){
+    const stackedFloor=Math.max(prev,income);
+    const stackedCeil=Math.min(income+gain,b.max);
+    if(stackedCeil>stackedFloor) tax+=(stackedCeil-stackedFloor)*b.r;
+    prev=b.max;
+    if(income+gain<=b.max)break;
+  }
+  return tax;
+}
+
+function calc(){
+  const cost=parseFloat(document.getElementById('costBasis').value)||0;
+  const sale=parseFloat(document.getElementById('salePrice').value)||0;
+  const fees=parseFloat(document.getElementById('fees').value)||0;
+  const gain=Math.max(0,sale-cost-fees);
+
+  document.getElementById('gainAmt').textContent=fmt(gain);
+
+  let fedTax=0,provTax=0,items=[];
+
+  if(country==='us'){
+    const isLong=document.getElementById('holdPeriod').value==='long';
+    const status=document.getElementById('filingStatus').value;
+    const otherInc=parseFloat(document.getElementById('otherIncome').value)||0;
+    const stateRate=parseFloat(document.getElementById('usState').value)||0;
+    const niitThresh={single:200000,mfj:250000,mfs:125000,hoh:200000}[status]||200000;
+
+    if(isLong){
+      fedTax=getLTRate(otherInc,gain,status);
+    } else {
+      // Short-term: add to ordinary income
+      const taxable=Math.max(0,otherInc+gain-16100); // 2026 standard deduction single
+      const totalTax=calcBrackets(taxable,usOrd[status]||usOrd.single).tax;
+      const baseTax=calcBrackets(Math.max(0,otherInc-16100),usOrd[status]||usOrd.single).tax;
+      fedTax=totalTax-baseTax;
+    }
+    // NIIT 3.8% on lesser of net investment income or income over threshold
+    const niit=(otherInc+gain>niitThresh && gain>0)?Math.min(gain,otherInc+gain-niitThresh)*0.038:0;
+    provTax=gain*stateRate;
+    items=[
+      {l:isLong?'Federal LT Capital Gains':'Federal ST Tax',v:fedTax,c:'#3b82f6'},
+      {l:'Net Investment Income Tax (3.8%)',v:niit,c:'#7c3aed'},
+      {l:'State Tax',v:provTax,c:'#f59e0b'},
+      {l:'Net Gain After Tax',v:gain-(fedTax+niit+provTax),c:'#0ea5a0'},
+    ];
+    fedTax+=niit;
+
+    // Rates info
+    document.getElementById('ratesTitle').textContent='USA Capital Gains Rates 2026';
+    document.getElementById('ratesContent').innerHTML=`
+      <div class="info-grid">
+        <div class="info-box"><h4>Long-Term Rates (Single)</h4><div class="table-scroll"><table class="data-table"><thead><tr><th>Income</th><th class="r">Rate</th></tr></thead><tbody>
+          <tr><td>$0 – $48,350</td><td class="r teal">0%</td></tr>
+          <tr><td>$48,351 – $533,400</td><td class="r">15%</td></tr>
+          <tr><td>Over $533,400</td><td class="r">20%</td></tr>
+          <tr><td colspan="2" style="font-size:0.78rem;color:var(--text-light)">+3.8% NIIT if income &gt; $200K</td></tr>
+        </tbody></table></div></div>
+        <div class="info-box"><h4>Short-Term Rates</h4><p style="font-size:0.83rem">Short-term gains taxed as <strong>ordinary income</strong> — up to 37% federal. Holding even 1 extra day past 1 year can save significant tax.</p>
+        <p style="font-size:0.83rem;margin-top:0.5rem">Standard deduction 2026: <strong>$15,000</strong> (single)</p></div>
+      </div>`;
+  } else {
+    // CANADA
+    const isPrimary=document.getElementById('isPrimary').value==='yes';
+    const assetType=document.getElementById('assetType').value;
+    const prov=document.getElementById('caProvince').value;
+    const otherInc=parseFloat(document.getElementById('caOtherIncome').value)||0;
+
+    if(isPrimary && assetType==='realestate'){
+      document.getElementById('fedTax').textContent='$0 (PRE)';
+      document.getElementById('provTax').textContent='$0 (PRE)';
+      document.getElementById('totalTax').textContent='$0';
+      document.getElementById('effRate').textContent='0%';
+      document.getElementById('netProceeds').textContent=fmt(sale-cost-fees);
+      document.getElementById('taxBreakdown').innerHTML='<p style="color:var(--teal);font-weight:600">✓ Principal Residence Exemption applies — no capital gains tax owed.</p>';
+      drawChart([{l:'Net Gain (Exempt)',v:gain,c:'#0ea5a0'}]);
+      return;
+    }
+
+    // 50% inclusion rate
+    const taxableGain=gain*0.50;
+    const totalIncome=otherInc+taxableGain;
+    // Federal: calc tax on total income minus BPA credit
+    const {tax:fedTotal}=calcBrackets(Math.max(0,totalIncome),caFedBrackets);
+    const {tax:fedBase}=calcBrackets(Math.max(0,otherInc),caFedBrackets);
+    const fedBPA=caFedBPA*0.15;
+    fedTax=Math.max(0,(fedTotal-fedBPA)-(Math.max(0,fedBase-fedBPA)));
+
+    // Provincial: approximate marginal rate on taxable gain
+    const topProvRate=caProvRates[prov]||caProvRates.ON;
+    // Find marginal fed rate on the gain portion
+    const {marginalRate}=calcBrackets(Math.max(0,totalIncome),caFedBrackets);
+    provTax=taxableGain*(topProvRate-marginalRate)*0.6; // rough split federal vs prov
+
+    items=[
+      {l:'Taxable gain (50% inclusion)',v:taxableGain,c:'#f59e0b'},
+      {l:'Federal Income Tax on gain',v:fedTax,c:'#3b82f6'},
+      {l:'Provincial Tax ('+prov+')',v:provTax,c:'#7c3aed'},
+      {l:'Net After Tax',v:gain-fedTax-provTax,c:'#0ea5a0'},
+    ];
+
+    document.getElementById('ratesTitle').textContent='Canada Capital Gains — 2026';
+    document.getElementById('ratesContent').innerHTML=`
+      <div class="info-grid">
+        <div class="info-box"><h4>Inclusion Rate</h4><p>Only <strong>50% of capital gains</strong> are included in taxable income for individuals. That 50% is then taxed at your marginal income tax rate.</p>
+        <p style="margin-top:0.5rem;font-size:0.83rem">Example: $15,000 gain → $7,500 taxable → taxed at your marginal rate (e.g., 43.41% in Ontario = $3,256 tax)</p></div>
+        <div class="info-box"><h4>Key Exemptions</h4><ul style="font-size:0.83rem;line-height:1.8;padding-left:1rem">
+          <li>Principal Residence Exemption (PRE)</li>
+          <li>Lifetime Capital Gains Exemption ($1.25M for small business shares, 2026)</li>
+          <li>TFSA withdrawals are always tax-free</li>
+          <li>RRSP gains deferred until withdrawal</li>
+        </ul></div>
+      </div>`;
+  }
+
+  const totalTaxAmt=fedTax+provTax;
+  const eff=gain>0?(totalTaxAmt/gain*100):0;
+  document.getElementById('fedTax').textContent=fmt(fedTax);
+  document.getElementById('provTax').textContent=fmt(provTax);
+  document.getElementById('totalTax').textContent=fmt(totalTaxAmt);
+  document.getElementById('effRate').textContent=eff.toFixed(1)+'%';
+  document.getElementById('netProceeds').textContent=fmt(gain-totalTaxAmt);
+
+  document.getElementById('taxBreakdown').innerHTML=
+    items.map(it=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;align-items:center;gap:8px;font-size:0.83rem;color:var(--text-mid)">
+        <div style="width:10px;height:10px;border-radius:3px;background:${it.c};flex-shrink:0"></div>${it.l}
+      </div><strong style="font-size:0.85rem">$${Math.round(it.v).toLocaleString()}</strong></div>`).join('');
+
+  drawChart(items);
+}
+
+function drawChart(items){
+  if(cgChart)cgChart.destroy();
+  const ctx=document.getElementById('cgChart').getContext('2d');
+  cgChart=new Chart(ctx,{type:'doughnut',data:{
+    labels:items.map(i=>i.l),
+    datasets:[{data:items.map(i=>Math.max(0,Math.round(i.v))),backgroundColor:items.map(i=>i.c),borderWidth:0}]
+  },options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' $'+Math.round(c.raw).toLocaleString()}}}}});
+  document.getElementById('chartLegend').innerHTML=items.map(i=>`<div class="legend-item"><div class="legend-dot" style="background:${i.c}"></div>${i.l}</div>`).join('');
+}
+document.addEventListener('DOMContentLoaded',()=>{calc();});
+
+</script>
+
+<!-- Print-only branded header/footer -->
+<script>
+/* ══ SHARE URL & PRINT ═══════════════════════════════════════════════════ */
+function shareURL(){
+  // Build URL with all current inputs encoded as params
+  var params = new URLSearchParams();
+  document.querySelectorAll('input[id],select[id]').forEach(function(el){
+    if(el.id && el.value !== '') params.set(el.id, el.value);
+  });
+  var activeBtn = document.querySelector('.cw-tbtn.on');
+  if(activeBtn && activeBtn.dataset.mode) params.set('mode', activeBtn.dataset.mode);
+  var shareLink = location.href.split('?')[0] + '?' + params.toString();
+  // Update URL bar (no reload)
+  try { history.replaceState({}, '', '?' + params.toString()); } catch(e){}
+  // Try clipboard first, always show modal as fallback
+  if(navigator.clipboard && typeof navigator.clipboard.writeText === 'function'){
+    navigator.clipboard.writeText(shareLink)
+      .then(function(){ showShareModal(shareLink, true); })
+      .catch(function(){ showShareModal(shareLink, false); });
+  } else {
+    showShareModal(shareLink, false);
+  }
+}
+
+function showShareModal(url, alreadyCopied){
+  var old = document.getElementById('fcs-share-modal'); if(old) old.remove();
+  var overlay = document.createElement('div');
+  overlay.id = 'fcs-share-modal';
+  overlay.style.cssText = [
+    'position:fixed','inset:0','background:rgba(6,15,26,0.7)',
+    'z-index:99999','display:flex','align-items:center',
+    'justify-content:center','padding:20px','font-family:inherit'
+  ].join(';');
+  var card = document.createElement('div');
+  card.style.cssText = [
+    'background:#fff','border-radius:16px','padding:32px',
+    'max-width:540px','width:100%','box-shadow:0 32px 80px rgba(0,0,0,0.4)',
+    'position:relative','font-family:inherit'
+  ].join(';');
+  var copied = alreadyCopied
+    ? '<div style="background:#E6F7F1;border:1px solid #1DB584;border-radius:8px;padding:10px 16px;font-size:13px;color:#0a5c3a;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg width=14 height=14 viewBox="0 0 16 16" fill=none><path d="M3 8l3.5 3.5L13 4" stroke="#1DB584" stroke-width=2 stroke-linecap=round stroke-linejoin=round/></svg>Link copied to clipboard!</div>'
+    : '';
+  card.innerHTML = ''
+    + '<div style="font-size:18px;font-weight:800;color:#0D1B2A;margin-bottom:6px">Share this Calculation</div>'
+    + '<div style="font-size:13px;color:#6B7A8D;margin-bottom:16px">Anyone with this link will see your exact inputs pre-filled.</div>'
+    + copied
+    + '<div style="font-size:12px;font-weight:600;color:#9BA8B5;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em">Shareable Link</div>'
+    + '<div style="display:flex;gap:8px;margin-bottom:20px">'
+    + '<input id="fcs-share-input" readonly value="' + url.replace(/"/g, '&quot;') + '" '
+    + 'style="flex:1;padding:10px 12px;border:1.5px solid #E4E9EF;border-radius:8px;font-size:12px;color:#374151;font-family:monospace;min-width:0;background:#F8FAFB" />'
+    + '<button id="fcs-copy-btn" style="background:#1DB584;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0">Copy</button>'
+    + '</div>'
+    + '<button id="fcs-close-btn" style="width:100%;padding:10px;border:1.5px solid #E4E9EF;border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:#6B7A8D;cursor:pointer">Close</button>';
+  overlay.appendChild(card);
+  document.body.appendChild(overlay);
+  // Wire copy button
+  var inp = document.getElementById('fcs-share-input');
+  var copyBtn = document.getElementById('fcs-copy-btn');
+  copyBtn.addEventListener('click', function(){
+    inp.select(); inp.setSelectionRange(0,99999);
+    try {
+      if(navigator.clipboard){ navigator.clipboard.writeText(url); }
+      else { document.execCommand('copy'); }
+    } catch(e){ document.execCommand('copy'); }
+    copyBtn.textContent = '✓ Copied!';
+    copyBtn.style.background = '#18a073';
+    setTimeout(function(){ copyBtn.textContent='Copy'; copyBtn.style.background='#1DB584'; }, 2000);
+  });
+  // Wire close
+  document.getElementById('fcs-close-btn').addEventListener('click', function(){ overlay.remove(); });
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.remove(); });
+  // Auto-select input
+  setTimeout(function(){ if(inp){ inp.focus(); inp.select(); }}, 100);
+}
+
+function printCalc(){
+  // Set print date in branded header
+  var d = document.getElementById('print-date');
+  if(d) d.textContent = 'Generated: ' + new Date().toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
+  var btn = document.querySelector('.res-print');
+  var orig = btn ? btn.innerHTML : '';
+  if(btn){ btn.innerHTML = 'Sending...'; btn.style.opacity = '.6'; }
+  setTimeout(function(){
+    window.print();
+    setTimeout(function(){ if(btn){ btn.innerHTML = orig; btn.style.opacity = '1'; }}, 1500);
+  }, 200);
+}
+
+function loadFromURL(){
+  var p = new URLSearchParams(location.search);
+  if(!p.toString()) return;
+  var loaded = false;
+  p.forEach(function(v,k){
+    if(k === 'mode') return;
+    var el = document.getElementById(k);
+    if(el){ el.value = v; loaded = true; }
+  });
+  var mode = p.get('mode');
+  if(mode){
+    document.querySelectorAll('.cw-tbtn').forEach(function(b){
+      b.classList.toggle('on', b.dataset.mode === mode);
+    });
+    if(typeof setCountry === 'function') setCountry(mode);
+    else if(typeof setMode === 'function') setMode(mode);
+  }
+  if(loaded){
+    if(typeof calc === 'function') calc();
+    else if(typeof c === 'function') c();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFromURL);
+
+</script>
+<script src="../shared.js"></script>
+</body></html>

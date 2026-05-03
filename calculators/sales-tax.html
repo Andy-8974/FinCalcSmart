@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Tax Calculator 2026 — USA & Canada | FinCalc Smart</title>
+<meta name="description" content="Calculate sales tax for any Canadian province (GST/HST/PST) or US state. Instantly add or remove tax from any price. Free 2026 sales tax calculator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sales Tax Calculator — USA & Canada | FinCalc Smart",
+  "description": "",
+  "url": "https://fincalcsmart.com/calculators/sales-tax.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "FinCalc Smart"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are there exemptions from GST/HST?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — basic groceries (not prepared food), prescription drugs, most health and dental services, residential rent, most childcare services, and financial services are zero-rated or exempt from GST/HST "
+      }
+    },    {
+      "@type": "Question",
+      "name": "How do US sales taxes differ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "US state sales tax rates are the base — many cities and counties add local taxes on top. E.g., California state rate is 7.25%, but Los Angeles County is 10.25% total. This calculator uses the state ba"
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style id="cw-body-font">body,body *{font-family:'Plus Jakarta Sans',sans-serif!important}</style>
+
+<meta property="og:site_name" content="FinCalc Smart"/>
+<meta property="og:url" content="https://fincalcsmart.com/calculators/sales-tax.html"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="FinCalc Smart"/>
+  <meta property="og:title" content="Sales Tax Calculator 2026 — USA & Canada | FinCalc Smart"/>
+  <meta property="og:description" content="Free professional financial calculator for USA and Canada."/>
+  <meta property="og:url" content="https://fincalcsmart.com/calculators/sales-tax.html"/>
+  <meta property="og:image" content="https://fincalcsmart.com/favicon.svg"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Sales Tax Calculator 2026 — USA & Canada | FinCalc Smart"/>
+  <meta name="twitter:description" content="Free professional financial calculator for USA and Canada."/>
+  <link rel="canonical" href="https://fincalcsmart.com/calculators/sales-tax.html"/>
+</head>
+<body>
+<script src="../nav.js"></script>
+<div class="calc-hero"><div class="calc-hero-inner">
+  <h1>Sales Tax Calculator</h1>
+  <p>Calculate GST/HST/PST for all Canadian provinces and sales tax for all US states.</p>
+  <div class="country-toggle">
+      <div class="cw-toggle"><button class="cw-tbtn on" data-mode="us"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;flex-shrink:0"><rect width="20" height="14" fill="#B22234"/><rect y="1.08" width="20" height="1.08" fill="#fff"/><rect y="3.23" width="20" height="1.08" fill="#fff"/><rect y="5.38" width="20" height="1.08" fill="#fff"/><rect y="7.54" width="20" height="1.08" fill="#fff"/><rect y="9.69" width="20" height="1.08" fill="#fff"/><rect y="11.85" width="20" height="1.08" fill="#fff"/><rect width="8" height="7.54" fill="#3C3B6E"/><circle cx="1.3" cy="1.1" r=".55" fill="#fff"/><circle cx="2.65" cy="1.1" r=".55" fill="#fff"/><circle cx="4" cy="1.1" r=".55" fill="#fff"/><circle cx="5.35" cy="1.1" r=".55" fill="#fff"/><circle cx="6.7" cy="1.1" r=".55" fill="#fff"/><circle cx="1.97" cy="2.32" r=".55" fill="#fff"/><circle cx="3.32" cy="2.32" r=".55" fill="#fff"/><circle cx="4.67" cy="2.32" r=".55" fill="#fff"/><circle cx="6.02" cy="2.32" r=".55" fill="#fff"/><circle cx="1.3" cy="3.54" r=".55" fill="#fff"/><circle cx="2.65" cy="3.54" r=".55" fill="#fff"/><circle cx="4" cy="3.54" r=".55" fill="#fff"/><circle cx="5.35" cy="3.54" r=".55" fill="#fff"/><circle cx="6.7" cy="3.54" r=".55" fill="#fff"/><circle cx="1.97" cy="4.77" r=".55" fill="#fff"/><circle cx="3.32" cy="4.77" r=".55" fill="#fff"/><circle cx="4.67" cy="4.77" r=".55" fill="#fff"/><circle cx="6.02" cy="4.77" r=".55" fill="#fff"/><circle cx="1.3" cy="6" r=".55" fill="#fff"/><circle cx="2.65" cy="6" r=".55" fill="#fff"/><circle cx="4" cy="6" r=".55" fill="#fff"/><circle cx="5.35" cy="6" r=".55" fill="#fff"/><circle cx="6.7" cy="6" r=".55" fill="#fff"/></svg>&nbsp;USA</button><button class="cw-tbtn" data-mode="ca"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;vertical-align:middle;flex-shrink:0"><rect width="20" height="14" fill="#fff"/><rect width="5" height="14" fill="#D52B1E"/><rect x="15" width="5" height="14" fill="#D52B1E"/><path d="M10 2L10.5 4.2 12.5 3.5 11.5 5.2 13.5 5.5 12 6.8 13 8.5 10.8 7.8 10.8 11H9.2L9.2 7.8 7 8.5 8 6.8 6.5 5.5 8.5 5.2 7.5 3.5 9.5 4.2Z11.4 7.1L12.3 9.8L10 8.2L7.7 9.8L8.6 7.1L6.4 5.5H9.1Z" fill="#D52B1E"/></svg>&nbsp;Canada</button></div>
+    </div>
+</div></div>
+<div id="print-header" style="display:none" style="display:flex;justify-content:space-between;align-items:center">
+  <div>
+    <div style="font-size:18px;font-weight:900;letter-spacing:-.3px">FinCalc Smart<span style="color:#1DB584">.</span></div>
+    <div style="font-size:11px;opacity:.5;margin-top:2px">fincalcsmart.com</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:13px;font-weight:700" id="print-calc-title">Financial Calculator</div>
+    <div style="font-size:11px;opacity:.45;margin-top:2px" id="print-date"></div>
+  </div>
+</div>
+<div id="print-footer" style="display:none">⚠️ Results are estimates for informational purposes only. Not financial advice — consult a licensed professional before making financial decisions.<br/><strong>© 2026 FinCalc Smart</strong> · fincalcsmart.com · contact@fincalcsmart.com</div>
+
+<div class="calc-wrapper">
+<div class="calc-main">
+<div class="calc-split">
+  <div class="calc-inputs">
+    <div class="calc-inputs-header">
+      <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+      <h2>Transaction Details</h2>
+    </div>
+    <div class="form-grid">
+      <div class="form-row"><label for="amt">Amount (before tax)</label><div class="input-prefix"><span>$</span><input type="number" id="amt" value="1000" oninput="c()"></div></div>
+      <div class="form-row" id="provRow"><label>Province</label>
+        <select id="prov" onchange="c()">
+          <option value="ON|0.13|0|HST">Ontario — 13% HST</option>
+          <option value="BC|0.05|0.07|GST+PST">British Columbia — 5% GST + 7% PST</option>
+          <option value="AB|0.05|0|GST">Alberta — 5% GST only</option>
+          <option value="QC|0.05|0.09975|GST+QST">Quebec — 5% GST + 9.975% QST</option>
+          <option value="MB|0.05|0.07|GST+PST">Manitoba — 5% GST + 7% PST</option>
+          <option value="SK|0.05|0.06|GST+PST">Saskatchewan — 5% GST + 6% PST</option>
+          <option value="NS|0.15|0|HST">Nova Scotia — 15% HST</option>
+          <option value="NB|0.15|0|HST">New Brunswick — 15% HST</option>
+          <option value="PE|0.15|0|HST">PEI — 15% HST</option>
+          <option value="NL|0.15|0|HST">Newfoundland — 15% HST</option>
+          <option value="YT|0.05|0|GST">Yukon — 5% GST</option>
+          <option value="NT|0.05|0|GST">NWT — 5% GST</option>
+          <option value="NU|0.05|0|GST">Nunavut — 5% GST</option>
+        </select>
+      </div>
+      <div class="form-row" id="stateRow" style="display:none"><label>State</label>
+        <select id="state" onchange="c()">
+          <option value="0|AK">Alaska — 0%</option>
+          <option value="0|DE">Delaware — 0%</option>
+          <option value="0|MT">Montana — 0%</option>
+          <option value="0|NH">New Hampshire — 0%</option>
+          <option value="0|OR">Oregon — 0%</option>
+          <option value="0.04|AL">Alabama — 4%</option>
+          <option value="0.056|AZ">Arizona — 5.6%</option>
+          <option value="0.065|AR">Arkansas — 6.5%</option>
+          <option value="0.0725|CA" selected>California — 7.25%</option>
+          <option value="0.029|CO">Colorado — 2.9%</option>
+          <option value="0.0635|CT">Connecticut — 6.35%</option>
+          <option value="0.06|FL">Florida — 6%</option>
+          <option value="0.04|GA">Georgia — 4%</option>
+          <option value="0.04|HI">Hawaii — 4%</option>
+          <option value="0.06|ID">Idaho — 6%</option>
+          <option value="0.0625|IL">Illinois — 6.25%</option>
+          <option value="0.07|IN">Indiana — 7%</option>
+          <option value="0.06|IA">Iowa — 6%</option>
+          <option value="0.065|KS">Kansas — 6.5%</option>
+          <option value="0.06|KY">Kentucky — 6%</option>
+          <option value="0.0445|LA">Louisiana — 4.45%</option>
+          <option value="0.055|ME">Maine — 5.5%</option>
+          <option value="0.06|MD">Maryland — 6%</option>
+          <option value="0.0625|MA">Massachusetts — 6.25%</option>
+          <option value="0.06|MI">Michigan — 6%</option>
+          <option value="0.06875|MN">Minnesota — 6.875%</option>
+          <option value="0.07|MS">Mississippi — 7%</option>
+          <option value="0.04225|MO">Missouri — 4.225%</option>
+          <option value="0|MT">Montana — 0%</option>
+          <option value="0.055|NE">Nebraska — 5.5%</option>
+          <option value="0.0685|NV">Nevada — 6.85%</option>
+          <option value="0.07|NJ">New Jersey — 7%</option>
+          <option value="0.05125|NM">New Mexico — 5.125%</option>
+          <option value="0.04|NY">New York — 4%</option>
+          <option value="0.0475|NC">North Carolina — 4.75%</option>
+          <option value="0.05|ND">North Dakota — 5%</option>
+          <option value="0.0575|OH">Ohio — 5.75%</option>
+          <option value="0.045|OK">Oklahoma — 4.5%</option>
+          <option value="0.0|OR">Oregon — 0%</option>
+          <option value="0.06|PA">Pennsylvania — 6%</option>
+          <option value="0.07|RI">Rhode Island — 7%</option>
+          <option value="0.06|SC">South Carolina — 6%</option>
+          <option value="0.045|SD">South Dakota — 4.5%</option>
+          <option value="0.07|TN">Tennessee — 7%</option>
+          <option value="0.0625|TX">Texas — 6.25%</option>
+          <option value="0.0485|UT">Utah — 4.85%</option>
+          <option value="0.06|VT">Vermont — 6%</option>
+          <option value="0.053|VA">Virginia — 5.3%</option>
+          <option value="0.065|WA">Washington — 6.5%</option>
+          <option value="0.06|WV">West Virginia — 6%</option>
+          <option value="0.05|WI">Wisconsin — 5%</option>
+          <option value="0.04|WY">Wyoming — 4%</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn span-2" aria-label="Calculate" onclick="c()">Calculate</button>
+  </div>
+  <div class="calc-results-panel">
+    <div class="calc-results-numbers">
+      <div class="results-header">
+        <h3>Results</h3>
+        <div class="results-actions">
+          <button class="res-btn res-share" onclick="shareURL()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="13" cy="3" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="3" cy="8" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="13" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.2L11.5 4M4.5 8.8L11.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Share
+          </button>
+          <button class="res-btn res-print" onclick="printCalc()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="3" y="1" width="10" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M3 5.5H1a1 1 0 0 0-1 1V12a1 1 0 0 0 1 1h2v-3h10v3h2a1 1 0 0 0 1-1V6.5a1 1 0 0 0-1-1h-2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="10" width="10" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            Print
+          </button>
+        </div>
+      </div>
+      <div class="result-grid">
+        <div class="result-item"><div class="label">Tax Amount</div><div class="value teal" id="taxAmt">—</div></div>
+        <div class="result-item"><div class="label">Total with Tax</div><div class="value " id="total">—</div></div>
+        <div class="result-item"><div class="label">Federal/GST Portion</div><div class="value " id="gst">—</div></div>
+        <div class="result-item"><div class="label">Provincial/State Portion</div><div class="value " id="pst">—</div></div>
+        <div class="result-item"><div class="label">Total Tax Rate</div><div class="value teal" id="rate">—</div></div>
+        <div class="result-item"><div class="label">Tax per $100</div><div class="value " id="per100">—</div></div>
+      </div>
+    </div>
+    <div class="calc-results-chart">
+      <div class="chart-tabs-sm">
+        <button class="chart-tab-sm active" onclick="showChart('doughnut')">Price Breakdown</button>
+      </div>
+      <div class="chart-container"><canvas id="ch"></canvas></div>
+      <div class="chart-legend" id="leg"></div>
+    </div>
+  </div>
+</div>
+<div class="content-card">
+  <h2>Canadian Tax Structure</h2><div class="info-grid"><div class="info-box"><h4>HST Provinces</h4><p>Ontario (13%), Nova Scotia (15%), NB (15%), PEI (15%), NL (15%). One combined rate — no separate PST.</p></div><div class="info-box"><h4>GST+PST Provinces</h4><p>BC (5+7=12%), Manitoba (5+7=12%), Saskatchewan (5+6=11%). Tax is collected separately.</p></div><div class="info-box"><h4>GST Only</h4><p>Alberta, Yukon, NWT, Nunavut — 5% federal GST only. Alberta has no provincial sales tax, making it the lowest-tax province for purchases.</p></div><div class="info-box"><h4>Quebec (QST)</h4><p>Quebec has its own sales tax: QST at 9.975%. Combined with 5% GST = 14.975% effective rate. QST is calculated on the price including GST.</p></div></div></div><div class="content-card">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are there exemptions from GST/HST?</button><div class="faq-a">Yes — basic groceries (not prepared food), prescription drugs, most health and dental services, residential rent, most childcare services, and financial services are zero-rated or exempt from GST/HST in Canada.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do US sales taxes differ?</button><div class="faq-a">US state sales tax rates are the base — many cities and counties add local taxes on top. E.g., California state rate is 7.25%, but Los Angeles County is 10.25% total. This calculator uses the state base rate only.</div></div>
+</div><div class="disclaimer">&#9888;&#65039; Tax rates current as of 2025. Local taxes (municipalities) may add to state/provincial rates. Verify before pricing.</div>
+</div>
+<div class="calc-sidebar">
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:250px;background:linear-gradient(160deg,#1c1c1e 0%,#2d2d2f 100%);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:22px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.2);">
+  <div>
+    <div style="color:#f5a623;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">BMO SmartMortgage™</div>
+    <div style="color:white;font-size:1.2rem;font-weight:700;line-height:1.3;margin-bottom:8px;">Lock in your rate today.<br><span style="color:#f5a623;">From 4.89%</span></div>
+    <div style="color:rgba(255,255,255,0.6);font-size:0.78rem;line-height:1.5;">5-year fixed rate. Pre-qualify online in minutes. First-time buyer discounts available.</div>
+  </div>
+  <div>
+    <div style="background:#f5a623;color:#1c1c1e;font-size:0.82rem;font-weight:700;padding:10px 18px;border-radius:8px;display:inline-block;cursor:pointer;">Get Pre-Approved →</div>
+    <div style="color:rgba(255,255,255,0.3);font-size:0.6rem;margin-top:8px;">OAC. Rates subject to change without notice.</div>
+  </div>
+</div></div>
+  <div class="related-card"><h4>Related Calculators</h4><ul class="related-list"><li><a href="car-loan.html">Car Loan</a></li><li><a href="car-lease.html">Car Lease</a></li><li><a href="income-tax.html">Income Tax</a></li></ul></div>
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:600px;background:linear-gradient(180deg,#0d1f35 0%,#152a45 50%,#0d1f35 100%);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;padding:28px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.2);gap:0;">
+  <div style="color:#c9a84c;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;">TD Canada Trust</div>
+  <div style="color:white;font-size:1.5rem;font-weight:700;line-height:1.2;margin-bottom:12px;">Your first home<br>starts here.</div>
+  <div style="color:rgba(255,255,255,0.6);font-size:0.82rem;line-height:1.65;margin-bottom:24px;">TD mortgage specialists are ready to help. Get pre-approved online in 3 minutes and lock in your rate for 120 days.</div>
+  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px;margin-bottom:24px;">
+    <div style="color:rgba(255,255,255,0.45);font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">5-Year Fixed</div>
+    <div style="color:#c9a84c;font-size:2.2rem;font-weight:700;line-height:1;">4.94%</div>
+    <div style="color:rgba(255,255,255,0.4);font-size:0.7rem;margin-top:4px;">APR 5.02% — as low as</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px;margin-bottom:auto;">
+    <div style="color:rgba(255,255,255,0.45);font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Variable Rate</div>
+    <div style="color:white;font-size:2rem;font-weight:700;line-height:1;">Prime − 0.10%</div>
+    <div style="color:rgba(255,255,255,0.4);font-size:0.7rem;margin-top:4px;">Currently 6.85%</div>
+  </div>
+  <div style="margin-top:24px;">
+    <div style="background:#c9a84c;color:#0d1f35;font-size:0.88rem;font-weight:700;padding:13px 18px;border-radius:9px;text-align:center;cursor:pointer;margin-bottom:10px;">Get Pre-Approved Today</div>
+    <div style="color:rgba(255,255,255,0.3);font-size:0.6rem;text-align:center;line-height:1.5;">OAC. Rates subject to change. TD Bank Group.</div>
+  </div>
+</div></div>
+</div>
+</div>
+<script>
+/* ── Input validation & NaN guard ────────────────────────────── */
+function safeVal(v,fallback){
+  if(v===null||v===undefined||v===''||isNaN(v)||!isFinite(v)) return fallback!==undefined?fallback:'—';
+  return v;
+}
+function fmtGuard(v,prefix,suffix,decimals){
+  if(v===null||v===undefined||isNaN(v)||!isFinite(v)||v<0) return '—';
+  var n=typeof decimals==='number'?Number(v).toFixed(decimals):Math.round(v);
+  var s=Number(n).toLocaleString('en-CA');
+  return (prefix||'')+s+(suffix||'');
+}
+
+let country='us', ch=null;
+function fmt(n){return '$'+Math.round(Math.max(0,n)).toLocaleString();}
+
+function setCountry(co){
+  country=co;
+  document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.toggle('active',b.dataset.country===co));
+  document.getElementById('provRow').style.display=co==='ca'?'':'none';
+  document.getElementById('stateRow').style.display=co==='us'?'':'none';
+  c();
+}
+function c(){
+  const amt=parseFloat(document.getElementById('amt').value)||0;
+  let gstRate=0,pstRate=0,label='Tax';
+  if(country==='ca'){
+    const v=document.getElementById('prov').value.split('|');
+    gstRate=parseFloat(v[1])||0; pstRate=parseFloat(v[2])||0; label=v[3]||'Tax';
+  } else {
+    const v=document.getElementById('state').value.split('|');
+    gstRate=parseFloat(v[0])||0; pstRate=0;
+  }
+  const gst=amt*gstRate,pst=amt*pstRate,taxAmt=gst+pst;
+  const total=amt+taxAmt,rate=(gstRate+pstRate)*100;
+  document.getElementById('taxAmt').textContent='$'+taxAmt.toFixed(2);
+  document.getElementById('total').textContent='$'+total.toFixed(2);
+  document.getElementById('gst').textContent='$'+gst.toFixed(2)+(country==='ca'?' ('+Math.round(gstRate*100)+'%)':'');
+  document.getElementById('pst').textContent=pst>0?'$'+pst.toFixed(2)+' ('+Math.round(pstRate*100)+'%)':'—';
+  document.getElementById('rate').textContent=rate.toFixed(3)+'%';
+  document.getElementById('per100').textContent='$'+rate.toFixed(2);
+  if(ch)ch.destroy();
+  const ctx=document.getElementById('ch').getContext('2d');
+  const dData=pst>0?[Math.round(amt),Math.round(gst),Math.round(pst)]:[Math.round(amt),Math.round(gst)];
+  const dLbls=pst>0?['Pre-Tax Price','GST/Federal','PST/QST']:['Pre-Tax Price','Tax'];
+  ch=new Chart(ctx,{type:'doughnut',data:{labels:dLbls,datasets:[{data:dData,backgroundColor:['#0ea5a0','#c9a84c','#ef4444'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'right'},tooltip:{callbacks:{label:ctx=>' $'+parseFloat(ctx.raw).toFixed(2)}}}}});
+  document.getElementById('leg').innerHTML='<div class="legend-item"><div class="legend-dot" style="background:#0ea5a0"></div>Pre-Tax</div><div class="legend-item"><div class="legend-dot" style="background:#c9a84c"></div>GST/Federal Tax</div>'+(pst>0?'<div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>PST/QST</div>':'');
+}
+function showChart(m){c();}
+document.addEventListener('DOMContentLoaded',()=>{setCountry('ca');});
+</script>
+
+<!-- Print-only branded header/footer -->
+<script>
+/* ══ SHARE URL & PRINT ═══════════════════════════════════════════════════ */
+function shareURL(){
+  // Build URL with all current inputs encoded as params
+  var params = new URLSearchParams();
+  document.querySelectorAll('input[id],select[id]').forEach(function(el){
+    if(el.id && el.value !== '') params.set(el.id, el.value);
+  });
+  var activeBtn = document.querySelector('.cw-tbtn.on');
+  if(activeBtn && activeBtn.dataset.mode) params.set('mode', activeBtn.dataset.mode);
+  var shareLink = location.href.split('?')[0] + '?' + params.toString();
+  // Update URL bar (no reload)
+  try { history.replaceState({}, '', '?' + params.toString()); } catch(e){}
+  // Try clipboard first, always show modal as fallback
+  if(navigator.clipboard && typeof navigator.clipboard.writeText === 'function'){
+    navigator.clipboard.writeText(shareLink)
+      .then(function(){ showShareModal(shareLink, true); })
+      .catch(function(){ showShareModal(shareLink, false); });
+  } else {
+    showShareModal(shareLink, false);
+  }
+}
+
+function showShareModal(url, alreadyCopied){
+  var old = document.getElementById('fcs-share-modal'); if(old) old.remove();
+  var overlay = document.createElement('div');
+  overlay.id = 'fcs-share-modal';
+  overlay.style.cssText = [
+    'position:fixed','inset:0','background:rgba(6,15,26,0.7)',
+    'z-index:99999','display:flex','align-items:center',
+    'justify-content:center','padding:20px','font-family:inherit'
+  ].join(';');
+  var card = document.createElement('div');
+  card.style.cssText = [
+    'background:#fff','border-radius:16px','padding:32px',
+    'max-width:540px','width:100%','box-shadow:0 32px 80px rgba(0,0,0,0.4)',
+    'position:relative','font-family:inherit'
+  ].join(';');
+  var copied = alreadyCopied
+    ? '<div style="background:#E6F7F1;border:1px solid #1DB584;border-radius:8px;padding:10px 16px;font-size:13px;color:#0a5c3a;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg width=14 height=14 viewBox="0 0 16 16" fill=none><path d="M3 8l3.5 3.5L13 4" stroke="#1DB584" stroke-width=2 stroke-linecap=round stroke-linejoin=round/></svg>Link copied to clipboard!</div>'
+    : '';
+  card.innerHTML = ''
+    + '<div style="font-size:18px;font-weight:800;color:#0D1B2A;margin-bottom:6px">Share this Calculation</div>'
+    + '<div style="font-size:13px;color:#6B7A8D;margin-bottom:16px">Anyone with this link will see your exact inputs pre-filled.</div>'
+    + copied
+    + '<div style="font-size:12px;font-weight:600;color:#9BA8B5;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em">Shareable Link</div>'
+    + '<div style="display:flex;gap:8px;margin-bottom:20px">'
+    + '<input id="fcs-share-input" readonly value="' + url.replace(/"/g, '&quot;') + '" '
+    + 'style="flex:1;padding:10px 12px;border:1.5px solid #E4E9EF;border-radius:8px;font-size:12px;color:#374151;font-family:monospace;min-width:0;background:#F8FAFB" />'
+    + '<button id="fcs-copy-btn" style="background:#1DB584;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0">Copy</button>'
+    + '</div>'
+    + '<button id="fcs-close-btn" style="width:100%;padding:10px;border:1.5px solid #E4E9EF;border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:#6B7A8D;cursor:pointer">Close</button>';
+  overlay.appendChild(card);
+  document.body.appendChild(overlay);
+  // Wire copy button
+  var inp = document.getElementById('fcs-share-input');
+  var copyBtn = document.getElementById('fcs-copy-btn');
+  copyBtn.addEventListener('click', function(){
+    inp.select(); inp.setSelectionRange(0,99999);
+    try {
+      if(navigator.clipboard){ navigator.clipboard.writeText(url); }
+      else { document.execCommand('copy'); }
+    } catch(e){ document.execCommand('copy'); }
+    copyBtn.textContent = '✓ Copied!';
+    copyBtn.style.background = '#18a073';
+    setTimeout(function(){ copyBtn.textContent='Copy'; copyBtn.style.background='#1DB584'; }, 2000);
+  });
+  // Wire close
+  document.getElementById('fcs-close-btn').addEventListener('click', function(){ overlay.remove(); });
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.remove(); });
+  // Auto-select input
+  setTimeout(function(){ if(inp){ inp.focus(); inp.select(); }}, 100);
+}
+
+function printCalc(){
+  // Set print date in branded header
+  var d = document.getElementById('print-date');
+  if(d) d.textContent = 'Generated: ' + new Date().toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
+  var btn = document.querySelector('.res-print');
+  var orig = btn ? btn.innerHTML : '';
+  if(btn){ btn.innerHTML = 'Sending...'; btn.style.opacity = '.6'; }
+  setTimeout(function(){
+    window.print();
+    setTimeout(function(){ if(btn){ btn.innerHTML = orig; btn.style.opacity = '1'; }}, 1500);
+  }, 200);
+}
+
+function loadFromURL(){
+  var p = new URLSearchParams(location.search);
+  if(!p.toString()) return;
+  var loaded = false;
+  p.forEach(function(v,k){
+    if(k === 'mode') return;
+    var el = document.getElementById(k);
+    if(el){ el.value = v; loaded = true; }
+  });
+  var mode = p.get('mode');
+  if(mode){
+    document.querySelectorAll('.cw-tbtn').forEach(function(b){
+      b.classList.toggle('on', b.dataset.mode === mode);
+    });
+    if(typeof setCountry === 'function') setCountry(mode);
+    else if(typeof setMode === 'function') setMode(mode);
+  }
+  if(loaded){
+    if(typeof calc === 'function') calc();
+    else if(typeof c === 'function') c();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFromURL);
+
+</script>
+<script src="../shared.js"></script>
+</body></html>

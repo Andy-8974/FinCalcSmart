@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fincalcsmart.com/sitemap.xml
+
+# Disallow development/utility files
+Disallow: /PATCHER.html

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>401(k) Contribution Calculator 2026 — USA | FinCalc Smart</title>
+<meta name="description" content="Project your 401(k) balance with employer match and compound growth. See exactly how much your 401(k) will be worth at retirement. Free USA calculator 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "401(k) Contribution Calculator 2026 — USA | FinCalc Smart",
+  "description": "",
+  "url": "https://fincalcsmart.com/calculators/401k-contribution.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "FinCalc Smart"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Traditional vs Roth 401(k) — which should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional: contributions are pre-tax (reduces current taxes), withdrawals taxed in retirement. Best if you're in a higher bracket now than you expect in retirement. Roth: contributions are after-tax, all growth and qualified withdrawals are tax-free. Best if you expect higher taxes in retirement. You can contribute to both in the same year — total can't exceed the annual limit."
+      }
+    },    {
+      "@type": "Question",
+      "name": "What happens to my 401(k) if I change jobs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four options: (1) Leave it with old employer if balance > $7,000, (2) Roll to new employer's plan, (3) Roll to Traditional IRA (most investment options), (4) Cash out — not recommended (10% penalty + income taxes if under 59½). Rolling to IRA typically gives the most flexibility."
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style id="cw-body-font">body,body *{font-family:'Plus Jakarta Sans',sans-serif!important}</style>
+
+<meta property="og:site_name" content="FinCalc Smart"/>
+<meta property="og:url" content="https://fincalcsmart.com/calculators/401k-contribution.html"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="FinCalc Smart"/>
+  <meta property="og:title" content="401(k) Contribution Calculator 2026 — USA | FinCalc Smart"/>
+  <meta property="og:description" content="Free professional financial calculator for USA and Canada."/>
+  <meta property="og:url" content="https://fincalcsmart.com/calculators/401k-contribution.html"/>
+  <meta property="og:image" content="https://fincalcsmart.com/favicon.svg"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="401(k) Contribution Calculator 2026 — USA | FinCalc Smart"/>
+  <meta name="twitter:description" content="Free professional financial calculator for USA and Canada."/>
+  <link rel="canonical" href="https://fincalcsmart.com/calculators/401k-contribution.html"/>
+</head>
+<body>
+<script src="../nav.js"></script>
+<div class="calc-hero"><div class="calc-hero-inner">
+  <h1>401(k) Contribution Calculator</h1>
+  <p>Project your 401(k) balance with employer match and compound growth over your career.</p>
+  <div class="country-badge cw-usa-badge"><svg width="18" height="13" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;flex-shrink:0;vertical-align:middle"><rect width="20" height="14" fill="#B22234"/><rect y="1.08" width="20" height="1.08" fill="#fff"/><rect y="3.23" width="20" height="1.08" fill="#fff"/><rect y="5.38" width="20" height="1.08" fill="#fff"/><rect y="7.54" width="20" height="1.08" fill="#fff"/><rect y="9.69" width="20" height="1.08" fill="#fff"/><rect y="11.85" width="20" height="1.08" fill="#fff"/><rect width="8" height="7.54" fill="#3C3B6E"/></svg>&nbsp;USA only</div>
+</div></div>
+<div id="print-header" style="display:none" style="display:flex;justify-content:space-between;align-items:center">
+  <div>
+    <div style="font-size:18px;font-weight:900;letter-spacing:-.3px">FinCalc Smart<span style="color:#1DB584">.</span></div>
+    <div style="font-size:11px;opacity:.5;margin-top:2px">fincalcsmart.com</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:13px;font-weight:700" id="print-calc-title">Financial Calculator</div>
+    <div style="font-size:11px;opacity:.45;margin-top:2px" id="print-date"></div>
+  </div>
+</div>
+<div id="print-footer" style="display:none">⚠️ Results are estimates for informational purposes only. Not financial advice — consult a licensed professional before making financial decisions.<br/><strong>© 2026 FinCalc Smart</strong> · fincalcsmart.com · contact@fincalcsmart.com</div>
+
+<div class="calc-wrapper">
+<div class="calc-main">
+<div class="calc-split">
+  <div class="calc-inputs">
+    <div class="calc-inputs-header">
+      <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="13"/><path d="M3 9l9-7 9 7"/><line x1="9" y1="22" x2="9" y2="13"/><line x1="15" y1="22" x2="15" y2="13"/></svg></div>
+      <h2>401(k) Details</h2>
+    </div>
+    <div class="form-grid">
+      <div class="form-row"><label for="age">Current Age</label><input type="number" id="age" value="35" oninput="c()"></div>
+      <div class="form-row"><label for="ret">Retirement Age</label><input type="number" id="ret" value="65" oninput="c()"></div>
+      <div class="form-row"><label for="bal">Current 401(k) Balance</label><div class="input-prefix"><span>$</span><input type="number" id="bal" value="85000" oninput="c()"></div></div>
+      <div class="form-row"><label for="salary">Annual Salary</label><div class="input-prefix"><span>$</span><input type="number" id="salary" value="90000" oninput="c()"></div></div>
+      <div class="form-row"><label for="contPct">Your Contribution Rate</label><div class="input-suffix"><span>%</span><input type="number" id="contPct" value="10" step="0.5" oninput="c()"></div></div>
+      <div class="form-row"><label for="matchPct">Employer Match Rate</label><div class="input-suffix"><span>%</span><input type="number" id="matchPct" value="4" step="0.5" oninput="c()"></div></div>
+      <div class="form-row"><label for="rate">Expected Annual Return</label><div class="input-suffix"><span>%</span><input type="number" id="rate" value="7" step="0.1" oninput="c()"></div></div>
+      <div class="form-row"><label for="raise">Annual Salary Increase</label><div class="input-suffix"><span>%</span><input type="number" id="raise" value="3" step="0.5" oninput="c()"></div></div>
+    </div>
+    <button class="calc-btn span-2" aria-label="Calculate" onclick="c()">Calculate</button>
+  </div>
+  <div class="calc-results-panel">
+    <div class="calc-results-numbers">
+      <div class="results-header">
+        <h3>Results</h3>
+        <div class="results-actions">
+          <button class="res-btn res-share" onclick="shareURL()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="13" cy="3" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="3" cy="8" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="13" cy="13" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 7.2L11.5 4M4.5 8.8L11.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Share
+          </button>
+          <button class="res-btn res-print" onclick="printCalc()">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="3" y="1" width="10" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M3 5.5H1a1 1 0 0 0-1 1V12a1 1 0 0 0 1 1h2v-3h10v3h2a1 1 0 0 0 1-1V6.5a1 1 0 0 0-1-1h-2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="10" width="10" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+            Print
+          </button>
+        </div>
+      </div>
+      <div class="result-grid">
+        <div class="result-item"><div class="label">Your Annual Contribution</div><div class="value " id="yourAnn">—</div></div>
+        <div class="result-item"><div class="label">Employer Match</div><div class="value teal" id="matchAnn">—</div></div>
+        <div class="result-item"><div class="label">Total Year 1</div><div class="value teal" id="totalAnn">—</div></div>
+        <div class="result-item"><div class="label">Projected Balance</div><div class="value " id="proj">—</div></div>
+        <div class="result-item"><div class="label">2026 Limit Status</div><div class="value " id="limit">—</div></div>
+        <div class="result-item"><div class="label">Total Match Value</div><div class="value teal" id="totalMatch">—</div></div>
+      </div>
+    </div>
+    <div class="calc-results-chart">
+      <div class="chart-tabs-sm">
+        <button class="chart-tab-sm active" onclick="showChart('stacked')">Balance Over Career</button>
+      </div>
+      <div class="chart-container"><canvas id="ch"></canvas></div>
+      <div class="chart-legend" id="leg"></div>
+    </div>
+  </div>
+</div>
+<div class="content-card">
+  <h2>2026 401(k) Contribution Limits</h2>
+  <div class="table-scroll"><table class="data-table"><thead><tr><th>Contribution Type</th><th class="r">2026 Limit</th></tr></thead><tbody>
+    <tr><td>Employee contribution (under 50)</td><td class="r teal">$23,500</td></tr>
+    <tr><td>Catch-up (age 50–59 and 64+)</td><td class="r">+$7,500 = $31,000 total</td></tr>
+    <tr><td>Super catch-up (age 60–63)</td><td class="r">+$11,250 = $34,750 total</td></tr>
+    <tr><td>Total including employer (all ages)</td><td class="r">$70,000</td></tr>
+  </tbody></table></div>
+</div><div class="content-card">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Traditional vs Roth 401(k) — which should I choose?</button><div class="faq-a">Traditional: contributions are pre-tax (reduces current taxes), withdrawals taxed in retirement. Best if you're in a higher bracket now than you expect in retirement. Roth: contributions are after-tax, all growth and qualified withdrawals are tax-free. Best if you expect higher taxes in retirement. You can contribute to both in the same year — total can't exceed the annual limit.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens to my 401(k) if I change jobs?</button><div class="faq-a">Four options: (1) Leave it with old employer if balance > $7,000, (2) Roll to new employer's plan, (3) Roll to Traditional IRA (most investment options), (4) Cash out — not recommended (10% penalty + income taxes if under 59½). Rolling to IRA typically gives the most flexibility.</div></div>
+</div><div class="disclaimer">&#9888;&#65039; USA only. 2025 limits apply. Not financial advice.</div>
+</div>
+<div class="calc-sidebar">
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:250px;background:linear-gradient(135deg,#0a2540 0%,#1a4b7a 100%);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:22px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.15);position:relative;">
+  <div style="position:absolute;right:-20px;top:-20px;width:120px;height:120px;background:rgba(0,119,182,0.2);border-radius:50%;"></div>
+  <div>
+    <div style="color:#60b4ff;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Wealthsimple</div>
+    <div style="color:white;font-size:1.25rem;font-weight:700;line-height:1.25;margin-bottom:8px;">Invest smarter.<br>Start with $1.</div>
+    <div style="color:rgba(255,255,255,0.65);font-size:0.78rem;line-height:1.5;">No-fee investing in stocks, ETFs, and crypto. Auto-rebalanced portfolios built for Canadians.</div>
+  </div>
+  <div>
+    <div style="background:#00c853;color:white;font-size:0.82rem;font-weight:700;padding:10px 20px;border-radius:8px;display:inline-block;cursor:pointer;">Get Started Free →</div>
+    <div style="color:rgba(255,255,255,0.35);font-size:0.62rem;margin-top:8px;">Commission-free trading. CIPF protected.</div>
+  </div>
+</div></div>
+  <div class="related-card"><h4>Related Calculators</h4><ul class="related-list"><li><a href="401k-save-max.html">401k Save Max</a></li><li><a href="ira-comparison.html">IRA Comparison</a></li><li><a href="retirement-planning.html">Retirement Planning</a></li></ul></div>
+  <div class="sidebar-ad" style="border:none;background:transparent;padding:0;min-height:auto;display:block;"><div style="width:300px;height:600px;background:linear-gradient(180deg,#0d1f35 0%,#152a45 50%,#0d1f35 100%);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;padding:28px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.2);gap:0;">
+  <div style="color:#c9a84c;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;">TD Canada Trust</div>
+  <div style="color:white;font-size:1.5rem;font-weight:700;line-height:1.2;margin-bottom:12px;">Your first home<br>starts here.</div>
+  <div style="color:rgba(255,255,255,0.6);font-size:0.82rem;line-height:1.65;margin-bottom:24px;">TD mortgage specialists are ready to help. Get pre-approved online in 3 minutes and lock in your rate for 120 days.</div>
+  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px;margin-bottom:24px;">
+    <div style="color:rgba(255,255,255,0.45);font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">5-Year Fixed</div>
+    <div style="color:#c9a84c;font-size:2.2rem;font-weight:700;line-height:1;">4.94%</div>
+    <div style="color:rgba(255,255,255,0.4);font-size:0.7rem;margin-top:4px;">APR 5.02% — as low as</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:18px;margin-bottom:auto;">
+    <div style="color:rgba(255,255,255,0.45);font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Variable Rate</div>
+    <div style="color:white;font-size:2rem;font-weight:700;line-height:1;">Prime − 0.10%</div>
+    <div style="color:rgba(255,255,255,0.4);font-size:0.7rem;margin-top:4px;">Currently 6.85%</div>
+  </div>
+  <div style="margin-top:24px;">
+    <div style="background:#c9a84c;color:#0d1f35;font-size:0.88rem;font-weight:700;padding:13px 18px;border-radius:9px;text-align:center;cursor:pointer;margin-bottom:10px;">Get Pre-Approved Today</div>
+    <div style="color:rgba(255,255,255,0.3);font-size:0.6rem;text-align:center;line-height:1.5;">OAC. Rates subject to change. TD Bank Group.</div>
+  </div>
+</div></div>
+</div>
+</div>
+<script>function safeNum(v,fallback=0){
+  const n=parseFloat(v);
+  return(!isFinite(n)||isNaN(n))?fallback:n;
+}
+
+
+let country = 'us';
+let ch=null;
+function fmt(n){return '$'+Math.round(Math.max(0,n)).toLocaleString();}
+
+function c(){
+  const age=parseInt(document.getElementById('age').value)||35;
+  const ret=parseInt(document.getElementById('ret').value)||65;
+  const yrs=Math.max(0,ret-age);
+  const bal=parseFloat(document.getElementById('bal').value)||0;
+  const salary=parseFloat(document.getElementById('salary').value)||0;
+  const contPct=(parseFloat(document.getElementById('contPct').value)||0)/100;
+  const matchPct=(parseFloat(document.getElementById('matchPct').value)||0)/100;
+  const rate=(parseFloat(document.getElementById('rate').value)||0)/100;
+  const raise=(parseFloat(document.getElementById('raise').value)||0)/100;
+  const yourAnn=Math.min(salary*contPct,24500); const matchAnn=salary*matchPct;
+  const lEl=document.getElementById('limit');
+  lEl.textContent=salary*contPct>24500?'⚠ Over $24,500 limit':'✓ Within limit';
+  lEl.style.color=salary*contPct>24500?'#fca5a5':'var(--teal-light)';
+  document.getElementById('yourAnn').textContent='$'+Math.round(yourAnn).toLocaleString();
+  document.getElementById('matchAnn').textContent='$'+Math.round(matchAnn).toLocaleString();
+  document.getElementById('totalAnn').textContent='$'+Math.round(yourAnn+matchAnn).toLocaleString();
+  let v=bal; const data=[]; let totalMatch=0;
+  for(let y=0;y<yrs;y++){
+    const s=salary*Math.pow(1+raise,y);
+    const yc=Math.min(s*contPct,24500); const ym=s*matchPct;
+    v=(v+yc+ym)*(1+rate); totalMatch+=ym; data.push(Math.round(v));
+  }
+  document.getElementById('proj').textContent='$'+Math.round(v).toLocaleString();
+  document.getElementById('totalMatch').textContent='$'+Math.round(totalMatch).toLocaleString();
+  try{if(ch)ch.destroy();}catch(e){ch=null;}
+  const ctx=document.getElementById('ch').getContext('2d');
+  ch=new window.Chart(ctx,{type:'line',data:{labels:Array.from({length:yrs},(_,i)=>'Age '+(age+i+1)),datasets:[{label:'401(k) Balance',data,borderColor:'#7c3aed',backgroundColor:'rgba(124,58,237,0.08)',fill:true,tension:0.3,pointRadius:0,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'$'+Math.round(v/1000)+'k'}},x:{grid:{display:false},ticks:{maxTicksLimit:10}}}}});
+  document.getElementById('leg').innerHTML='<div class="legend-item"><div class="legend-dot" style="background:#7c3aed"></div>401(k) Balance</div>';
+}
+function showChart(m){c();}
+document.addEventListener('DOMContentLoaded',()=>{c();});
+</script>
+
+<!-- Print-only branded header/footer -->
+<script>
+/* ══ SHARE URL & PRINT ═══════════════════════════════════════════════════ */
+function shareURL(){
+  // Build URL with all current inputs encoded as params
+  var params = new URLSearchParams();
+  document.querySelectorAll('input[id],select[id]').forEach(function(el){
+    if(el.id && el.value !== '') params.set(el.id, el.value);
+  });
+  var activeBtn = document.querySelector('.cw-tbtn.on');
+  if(activeBtn && activeBtn.dataset.mode) params.set('mode', activeBtn.dataset.mode);
+  var shareLink = location.href.split('?')[0] + '?' + params.toString();
+  // Update URL bar (no reload)
+  try { history.replaceState({}, '', '?' + params.toString()); } catch(e){}
+  // Try clipboard first, always show modal as fallback
+  if(navigator.clipboard && typeof navigator.clipboard.writeText === 'function'){
+    navigator.clipboard.writeText(shareLink)
+      .then(function(){ showShareModal(shareLink, true); })
+      .catch(function(){ showShareModal(shareLink, false); });
+  } else {
+    showShareModal(shareLink, false);
+  }
+}
+
+function showShareModal(url, alreadyCopied){
+  var old = document.getElementById('fcs-share-modal'); if(old) old.remove();
+  var overlay = document.createElement('div');
+  overlay.id = 'fcs-share-modal';
+  overlay.style.cssText = [
+    'position:fixed','inset:0','background:rgba(6,15,26,0.7)',
+    'z-index:99999','display:flex','align-items:center',
+    'justify-content:center','padding:20px','font-family:inherit'
+  ].join(';');
+  var card = document.createElement('div');
+  card.style.cssText = [
+    'background:#fff','border-radius:16px','padding:32px',
+    'max-width:540px','width:100%','box-shadow:0 32px 80px rgba(0,0,0,0.4)',
+    'position:relative','font-family:inherit'
+  ].join(';');
+  var copied = alreadyCopied
+    ? '<div style="background:#E6F7F1;border:1px solid #1DB584;border-radius:8px;padding:10px 16px;font-size:13px;color:#0a5c3a;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg width=14 height=14 viewBox="0 0 16 16" fill=none><path d="M3 8l3.5 3.5L13 4" stroke="#1DB584" stroke-width=2 stroke-linecap=round stroke-linejoin=round/></svg>Link copied to clipboard!</div>'
+    : '';
+  card.innerHTML = ''
+    + '<div style="font-size:18px;font-weight:800;color:#0D1B2A;margin-bottom:6px">Share this Calculation</div>'
+    + '<div style="font-size:13px;color:#6B7A8D;margin-bottom:16px">Anyone with this link will see your exact inputs pre-filled.</div>'
+    + copied
+    + '<div style="font-size:12px;font-weight:600;color:#9BA8B5;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em">Shareable Link</div>'
+    + '<div style="display:flex;gap:8px;margin-bottom:20px">'
+    + '<input id="fcs-share-input" readonly value="' + url.replace(/"/g, '&quot;') + '" '
+    + 'style="flex:1;padding:10px 12px;border:1.5px solid #E4E9EF;border-radius:8px;font-size:12px;color:#374151;font-family:monospace;min-width:0;background:#F8FAFB" />'
+    + '<button id="fcs-copy-btn" style="background:#1DB584;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0">Copy</button>'
+    + '</div>'
+    + '<button id="fcs-close-btn" style="width:100%;padding:10px;border:1.5px solid #E4E9EF;border-radius:8px;background:#fff;font-size:14px;font-weight:600;color:#6B7A8D;cursor:pointer">Close</button>';
+  overlay.appendChild(card);
+  document.body.appendChild(overlay);
+  // Wire copy button
+  var inp = document.getElementById('fcs-share-input');
+  var copyBtn = document.getElementById('fcs-copy-btn');
+  copyBtn.addEventListener('click', function(){
+    inp.select(); inp.setSelectionRange(0,99999);
+    try {
+      if(navigator.clipboard){ navigator.clipboard.writeText(url); }
+      else { document.execCommand('copy'); }
+    } catch(e){ document.execCommand('copy'); }
+    copyBtn.textContent = '✓ Copied!';
+    copyBtn.style.background = '#18a073';
+    setTimeout(function(){ copyBtn.textContent='Copy'; copyBtn.style.background='#1DB584'; }, 2000);
+  });
+  // Wire close
+  document.getElementById('fcs-close-btn').addEventListener('click', function(){ overlay.remove(); });
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.remove(); });
+  // Auto-select input
+  setTimeout(function(){ if(inp){ inp.focus(); inp.select(); }}, 100);
+}
+
+function printCalc(){
+  // Set print date in branded header
+  var d = document.getElementById('print-date');
+  if(d) d.textContent = 'Generated: ' + new Date().toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
+  var btn = document.querySelector('.res-print');
+  var orig = btn ? btn.innerHTML : '';
+  if(btn){ btn.innerHTML = 'Sending...'; btn.style.opacity = '.6'; }
+  setTimeout(function(){
+    window.print();
+    setTimeout(function(){ if(btn){ btn.innerHTML = orig; btn.style.opacity = '1'; }}, 1500);
+  }, 200);
+}
+
+function loadFromURL(){
+  var p = new URLSearchParams(location.search);
+  if(!p.toString()) return;
+  var loaded = false;
+  p.forEach(function(v,k){
+    if(k === 'mode') return;
+    var el = document.getElementById(k);
+    if(el){ el.value = v; loaded = true; }
+  });
+  var mode = p.get('mode');
+  if(mode){
+    document.querySelectorAll('.cw-tbtn').forEach(function(b){
+      b.classList.toggle('on', b.dataset.mode === mode);
+    });
+    if(typeof setCountry === 'function') setCountry(mode);
+    else if(typeof setMode === 'function') setMode(mode);
+  }
+  if(loaded){
+    if(typeof calc === 'function') calc();
+    else if(typeof c === 'function') c();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFromURL);
+
+</script>
+<script src="../shared.js"></script>
+</body></html>

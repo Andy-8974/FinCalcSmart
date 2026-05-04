@@ -26,7 +26,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#ffffff;color:#0D1B2A
 /* LAYOUT */
 .calc-wrapper{max-width:1400px;margin:0 auto;padding:36px 48px 60px;display:flex;gap:28px;align-items:flex-start;background:#fff}
 .calc-main{flex:1;min-width:0}
-.calc-sidebar{display:none}
+.calc-sidebar{width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:20px}
 .calc-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-bottom:20px}
 /* INPUTS */
 .calc-inputs{background:#fff;border:1.5px solid var(--gray-200);border-radius:16px;padding:24px}
@@ -95,7 +95,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#ffffff;color:#0D1B2A
 .disclaimer{background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:14px 18px;font-size:13px;color:#78350F;line-height:1.6;margin-top:8px}
 /* SECTION DIVIDER */
 .section-divider{height:1px;background:var(--gray-200);margin:24px 0}
-/* SIDEBAR — removed; ads will be re-added as inline responsive units */
+/* SIDEBAR */
+.sidebar-ad{display:none}
+.related-card{background:#fff;border:1.5px solid var(--gray-200);border-radius:14px;padding:20px}
+.related-card h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px}
+.related-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.related-list li a{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;font-size:13px;color:#374151;text-decoration:none;font-weight:500;transition:all 0.12s}
+.related-list li a::before{content:"→";color:var(--teal);font-size:13px;font-weight:700;flex-shrink:0}
+.related-list li a:hover{background:var(--teal-pale);color:var(--teal);padding-left:16px}
 /* UTILITIES */
 canvas{max-width:100%}
 .teal{color:var(--teal)}

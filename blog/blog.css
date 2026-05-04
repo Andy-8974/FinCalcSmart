@@ -45,7 +45,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1B2A;fo
 .article-meta span{display:flex;align-items:center;gap:5px}
 
 /* ARTICLE BODY */
-.article-layout{max-width:760px;margin:0 auto;padding:40px 40px 80px}
+.article-layout{max-width:1100px;margin:0 auto;padding:40px 40px 80px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:flex-start}
 .article-content{}
 .article-content h2{font-size:22px;font-weight:800;color:var(--navy);margin:36px 0 14px;letter-spacing:-.3px}
 .article-content h3{font-size:17px;font-weight:700;color:var(--navy);margin:24px 0 10px}
@@ -86,7 +86,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1B2A;fo
 .key-num .lbl{font-size:12px;color:var(--gray-600);margin-top:4px;font-weight:500}
 
 /* SIDEBAR */
-.article-sidebar{display:none}
+.article-sidebar{display:flex;flex-direction:column;gap:20px;position:sticky;top:80px}
 .sidebar-card{background:#fff;border:1.5px solid var(--gray-200);border-radius:14px;padding:20px}
 .sidebar-card h4{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px}
 .sidebar-toc a{display:block;font-size:13px;color:var(--navy);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--gray-100);font-weight:500;transition:color .12s}
@@ -102,7 +102,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1B2A;fo
 .article-disclaimer{background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:14px 18px;font-size:13px;color:#78350F;line-height:1.6;margin-top:32px}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.key-numbers{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:1024px){.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}.key-numbers{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 @media(max-width:768px){.blog-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.blog-container{padding:36px 20px}.article-layout{padding:36px 20px}.article-inner{padding:0 20px}.article-hero{padding:36px 20px}.key-numbers{grid-template-columns:1fr}}
 @media(max-width:500px){.blog-grid{grid-template-columns:1fr}}
 

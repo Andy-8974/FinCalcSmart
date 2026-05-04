@@ -130,7 +130,9 @@ canvas{max-width:100%}
   .calc-btn{padding:14px 16px}
   /* Keep 2-column results */
   .res-btn{padding:9px 13px}
-  .result-item{padding:12px 12px}
+  .result-item{padding:12px 12px!important}
+  .calc-results-numbers{padding:16px!important}
+  .result-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
 }
 
 /* ── Two-column form grid (reduces vertical scrolling) ─── */
@@ -181,7 +183,7 @@ canvas{max-width:100%}
   font-size: 11px; font-weight: 600; letter-spacing: .08em;
   text-transform: uppercase; color: rgba(255,255,255,0.5) !important; margin-bottom: 6px;
 }
-.result-item .value { font-size: clamp(18px,5.5vw,24px); font-weight: 800; color: #ffffff !important; letter-spacing: -.5px; }
+.result-item .value { font-size: clamp(14px,4vw,24px); font-weight: 800; color: #ffffff !important; letter-spacing: -.5px; }
 
 /* ── Sidebar related card arrow style (like reference) ────── */
 .related-list li a {
@@ -257,7 +259,9 @@ canvas{max-width:100%}
   .input-prefix span,.input-suffix span{padding:8px 6px;font-size:11px}
   .input-prefix input,.input-suffix input{padding:8px 8px;font-size:13px}
   .calc-btn{padding:13px 16px;font-size:14px}
-  .result-item{padding:10px 10px}
+  .result-item{padding:10px 10px!important}
+  .result-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  .result-item .value{font-size:14px!important}
   .results-header h3{font-size:16px}
   .res-btn{padding:7px 10px;font-size:11px;gap:4px}
   /* Nav — collapse hamburger earlier */

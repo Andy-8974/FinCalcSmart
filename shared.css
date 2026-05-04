@@ -111,19 +111,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#ffffff;color:#0D1B2A
 @media(max-width:1024px){.calc-wrapper{flex-direction:column}.calc-sidebar{width:100%;flex-direction:row;flex-wrap:wrap}.calc-sidebar>*{flex:1;min-width:280px}}
 @media(max-width:768px){.calc-hero{padding:24px 20px 30px}.calc-wrapper{padding:20px 16px 40px;gap:16px}.calc-split{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.calc-sidebar{flex-direction:column}}
 @media(max-width:600px){
-  /* Full-bleed: cards span edge-to-edge, matching the nav/hero width */
-  .calc-wrapper{padding:0;gap:0}
-  .calc-split{gap:0}
-  .calc-results-panel{gap:0}
+  /* Align wrapper padding with hero padding so cards sit at same x-position */
+  .calc-wrapper{padding:14px 16px 20px;gap:12px}
   .calc-hero{padding:20px 16px 20px}
-  /* Strip side borders & radius so sections stack seamlessly */
-  .calc-inputs{border-radius:0;border-left:none;border-right:none;border-top:none;padding:14px 16px}
-  .calc-results-numbers{border-radius:0;padding:16px}
-  .calc-results-chart{border-radius:0;border-left:none;border-right:none;padding:14px 16px}
-  .content-card{border-radius:0;border-left:none;border-right:none;border-top:none;margin-bottom:0;padding:14px 16px}
-  /* Sidebar cards keep their style but stay inset */
-  .calc-sidebar{padding:0 16px;gap:12px}
-  /* Keep 2-column form — tighten gap and font to fit at 430px */
+  /* Cards keep their border/radius — tighten inner padding only */
+  .calc-inputs{padding:14px 16px}
+  .calc-results-numbers{padding:16px}
+  .calc-results-chart{padding:14px 16px}
+  .content-card{padding:14px 16px}
+  /* Keep 2-column form — tighten gap and font to fit */
   .calc-inputs-header{margin-bottom:14px;padding-bottom:10px}
   .form-grid,.form-grid-2col{gap:10px 12px}
   .form-row label{font-size:11px}
@@ -249,10 +245,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#ffffff;color:#0D1B2A
 
 /* ── Ultra-narrow screens (375px — iPhone SE, most Android) ── */
 @media(max-width:375px){
-  /* Full-bleed maintained — do NOT restore calc-wrapper padding */
   .calc-hero{padding:18px 14px 16px}
   .calc-hero h1{letter-spacing:-.4px}
   .calc-hero-sub{font-size:13px}
+  .calc-wrapper{padding:10px 12px 16px;gap:10px}
   /* Tighter 2-column form fit at 375px */
   .form-grid,.form-grid-2col{gap:8px 10px}
   .form-row label{font-size:10px}

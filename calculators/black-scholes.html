@@ -212,22 +212,13 @@ function setCountry(cc) {
 
 function c(){
   const S=parseFloat(document.getElementById('S').value)||100;
-  // Guard: invalid inputs
-  if (!S || S <= 0 || !K || K <= 0 || !T || T <= 0 || !sigma || sigma <= 0) {
-    ['callPrice','putPrice','delta','gamma','theta','vega','rho'].forEach(function(id){
-      var el = document.getElementById(id);
-      if (el) el.textContent = '—';
-    });
-    return;
-  }
-
   const K=parseFloat(document.getElementById('K').value)||100;
   const days=parseFloat(document.getElementById('T').value)||90;
   const r=(parseFloat(document.getElementById('rfr').value)||0)/100||.045;
   const sigma=(parseFloat(document.getElementById('vol').value)||0)/100||.25;
   const q=(parseFloat(document.getElementById('div').value)||0)/100;
   const T=days/365;
-  if(T<=0||sigma<=0||S<=0||K<=0)return;
+  if(!S||S<=0||!K||K<=0||T<=0||!sigma||sigma<=0)return;
   const d1=(Math.log(S/K)+(r-q+sigma*sigma/2)*T)/(sigma*Math.sqrt(T));
   const d2=d1-sigma*Math.sqrt(T);
   const Nd1=normCDF(d1),Nd2=normCDF(d2),Nnd1=normCDF(-d1),Nnd2=normCDF(-d2);

@@ -95,13 +95,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#ffffff;color:#0D1B2A
 .disclaimer{background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:14px 18px;font-size:13px;color:#78350F;line-height:1.6;margin-top:8px}
 /* SECTION DIVIDER */
 .section-divider{height:1px;background:var(--gray-200);margin:24px 0}
-/* SIDEBAR */
-.sidebar-ad{background:#fff;border:1.5px solid var(--gray-200);border-radius:14px;overflow:hidden;min-height:120px}
-.related-card{background:#fff;border:1.5px solid var(--gray-200);border-radius:14px;padding:20px}
-.related-card h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:14px}
-.related-list{list-style:none;display:flex;flex-direction:column;gap:2px}
-.related-list li a{display:block;padding:8px 10px;border-radius:8px;font-size:13px;color:var(--navy);text-decoration:none;font-weight:500;transition:all 0.12s}
-.related-list li a:hover{background:var(--teal-pale);color:var(--teal);padding-left:14px}
+/* SIDEBAR — removed; ads will be re-added as inline responsive units */
 /* UTILITIES */
 canvas{max-width:100%}
 .teal{color:var(--teal)}

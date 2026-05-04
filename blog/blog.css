@@ -1,8 +1,8 @@
 /* FinCalc Smart Blog CSS */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1B2A;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1B2A;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip}
 :root{
   --navy:#0D1B2A;--navy-mid:#0A1628;--navy-deep:#060F1A;
   --teal:#1DB584;--teal-dk:#18a073;--teal-pale:#E6F7F1;

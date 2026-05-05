@@ -536,9 +536,18 @@
   function articleCard(keys, isCalcPage) {
     if (!keys || !keys.length) return '';
     var prefix = isCalcPage ? '../blog/' : '';
+    if (isCalcPage) {
+      /* Calculator pages: use related-card + related-list (same style as calcCard, no extra CSS needed) */
+      var items = keys.map(function(k){
+        var a = ARTICLES[k]; if (!a) return '';
+        return '<li><a href="' + prefix + a.href + '">' + a.title + '</a></li>';
+      }).join('');
+      return '<div class="related-card"><h4>Related Articles</h4><ul class="related-list">' + items + '</ul></div>';
+    }
+    /* Blog pages: use sidebar-card + related-posts (from blog.css) */
     var items = keys.map(function(k){
       var a = ARTICLES[k]; if (!a) return '';
-      return '<a href="' + prefix + a.href + '"><div><div class="rp-cat">' + a.cat + '</div><div class="rp-title">' + a.title + '</div></div></a>';
+      return '<a href="' + a.href + '"><div><div class="rp-cat">' + a.cat + '</div><div class="rp-title">' + a.title + '</div></div></a>';
     }).join('');
     return '<div class="sidebar-card"><h4>Related Articles</h4><div class="related-posts">' + items + '</div></div>';
   }
